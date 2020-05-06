@@ -56,6 +56,10 @@ h3{
 	font-weight: 300;
 }
 
+h4{
+	font-weight: 200;
+}
+
 .logo{
 	position: relative;
 }
@@ -208,7 +212,7 @@ main .about .wrapper .about-content .about-text{
 }
 
 main .about .wrapper .about-content .about-img{
-	width: 30%;
+	max-width: 30%;
 	margin: 0 30px;
 }
 
@@ -220,85 +224,103 @@ main .about .wrapper .about-content .about-img img{
 /*SERVICES*/
 
 main .services .wrapper .services-card{
-	display: flex;
+	display: flex;	
 }
 
 main .services .wrapper .services-card .card{
-	padding: 1rem 2rem;
-	margin: 1rem 2rem;
+	padding: 1.25rem;
+	margin: 1rem 2rem;	
 	box-shadow: 0 0 30px 0 rgba(84, 255, 231, .3);
 }
 
 main .services .wrapper .services-card .card img{
+	width: 60px;
 
 }
 
-main .services .wrapper .services-card .card h3{
+main .services .wrapper .services-card .card .card-text h3{
 	margin-bottom: 10px;
-}
-
-main .services .wrapper .services-card .card p{
-
+	color: var(--secondary-color);
 }
 
 /*PROJECTS*/
 
+main .projects{
+
+}
+
+main .projects .wrapper{
+}
+
 main .projects .wrapper .projects-card{
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	width: 80%;
+	margin: auto;
+	grid-gap: 40px;
 }
 
 main .projects .wrapper .projects-card .card{
-	position: relative;
-	overflow: hidden;
 	display: flex;
+	flex-direction: column;
+	padding: 2rem;
+	box-shadow: 0 0 30px 0 rgba(84, 255, 231, .1);
 }
 
-main .projects .wrapper .projects-card .card:hover .overlay{
-	opacity: 1;
-}
-
-main .projects .wrapper .projects-card .card:hover .demo-btn{
-	transform: translate(-50%, -50%) scale(1);
-	opacity: 1;
-}
-
-main .projects .wrapper .projects-card .card:hover .demo-img{
-	transform: scale(.9);
-}
-
-main .projects .wrapper .projects-card .card .demo-img{
+main .projects .wrapper .projects-card .card .card-img{
 	width: 100%;
-	height: 100%;
-	transition: all 200ms ease-in-out;
 }
 
-main .projects .wrapper .projects-card .card .overlay{
-	opacity: 0;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: rgba(0,0,0,.5);
-	transition: all 200ms ease-in-out;
+main .projects .wrapper .projects-card .card .card-img img{
+	width: 100%;
 }
 
-main .projects .wrapper .projects-card .card .demo-btn{
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%) scale(0);
+main .projects .wrapper .projects-card .card .card-text h4{
+	color: var(--secondary-color);
+}
+
+main .projects .wrapper .projects-card .card .card-text p{
+	font-size: .8rem;
+	line-height: normal;
+	margin-bottom: 10px 0px;
+}
+
+main .projects .wrapper .projects-card .card .card-text .demo-btn{
 	cursor: pointer;
+	border: solid 1px transparent;
+	color: var(--white-text);
+	padding: 5px 10px;
+	background: var(--secondary-color);
+	color: #000;
+	border-radius: 5px;
+	outline: none;
+	margin-top: 10px;
+}
+
+main .projects .wrapper .projects-card .card .card-text .demo-btn:hover{
 	border: solid 1px var(--secondary-color);
 	color: var(--white-text);
-	font-size: 1.4rem;
-	padding: 10px 20px;
-	background: none;
-	border-radius: 5px;
-	z-index: 2;
-	opacity: 0;
-	transition: all 200ms ease-in-out;
+	background: transparent;
+}
+
+/*CONTACTS*/
+
+main .contact .wrapper .contact-content{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+main .contact .wrapper .contact-text{
+	width: 50%;
+}
+
+main .contact .wrapper .contact-img{
+	width: 50%;
+}
+
+main .contact .wrapper .contact-img img{
+	width: 100%;
 }
 
 /*MEDIA QUERIES*/
@@ -368,6 +390,20 @@ main .projects .wrapper .projects-card .card .demo-btn{
 
 @media (max-width: 765px){
 
+	h2{
+		font-size: 1.5rem;
+	}
+
+	h2::after{
+		height: 10px;
+		top: -5px;
+	}
+
+	main .about .wrapper .about-content .about-text::before, main .front .wrapper .front-text::before{
+		width: 10px;
+		left: -20px;
+	}
+
 	section{
 		padding-right: 0 !important;
 		padding-left: 0 !important;
@@ -391,6 +427,16 @@ main .projects .wrapper .projects-card .card .demo-btn{
 		width: 80%;
 		margin-bottom: 5rem;
 		position: relative;
+	}
+
+	main .projects .wrapper .projects-card{
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		width: 95%;
+	}
+
+	main .services .wrapper .services-card .card{
+		padding: 1rem;
+		text-align: center;
 	}
 }
 
@@ -431,5 +477,13 @@ main .projects .wrapper .projects-card .card .demo-btn{
 
 	header nav ul li::after{
 		width: 0;
+	}
+	
+	main .services .wrapper .services-card .card img{
+		width: 30px;
+	}
+
+	main .services .wrapper .services-card .card .card-text h3{
+		font-size: .8rem;
 	}
 }
