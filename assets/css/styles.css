@@ -245,13 +245,6 @@ main .services .wrapper .services-card .card .card-text h3{
 
 /*PROJECTS*/
 
-main .projects{
-
-}
-
-main .projects .wrapper{
-}
-
 main .projects .wrapper .projects-card{
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -429,6 +422,11 @@ main .contact .wrapper .contact-img img{
 		position: relative;
 	}
 
+	main .about .wrapper .about-content .about-img{
+		max-width: 50%;
+		margin: 0 30px;
+	}
+
 	main .projects .wrapper .projects-card{
 		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 		width: 95%;
@@ -478,7 +476,7 @@ main .contact .wrapper .contact-img img{
 	header nav ul li::after{
 		width: 0;
 	}
-	
+
 	main .services .wrapper .services-card .card img{
 		width: 30px;
 	}
