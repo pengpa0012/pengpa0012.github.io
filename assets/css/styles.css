@@ -11,25 +11,49 @@
 body{
 	font-family: 'Poppins', sans-serif;
 	--header-color: #323232;
-	--nav-bg: #262626;
+	--section-bg: #262626;
 	--white-text: #EFEFEF;
 	--secondary-color: #54ffe7;
-	height: 100vh;
 }
 
 /*GLOBAL*/
 
 .nav-burger{
 	display: none;
+	cursor: pointer;
 }
 
 header nav, section .wrapper{
 	max-width: 1400px;
+	width: 95%;
 	margin: auto;
 }
 
 .colored-text{
 	color: var(--secondary-color);
+}
+
+h2{
+	font-size: 2.5rem;
+	color: var(--white-text);
+	position: relative;
+	margin-bottom: 5rem;
+	font-weight: 500;
+}
+
+h2::after{
+	content: '';
+	background: var(--secondary-color);
+	height: 20px;
+	width: 45px;
+	position: absolute;
+	left: 0px;
+	top: -15px;
+	border-radius: 25px;
+}
+
+h3{
+	font-weight: 300;
 }
 
 .logo{
@@ -44,6 +68,12 @@ header nav, section .wrapper{
 	position: absolute;
 	left: 0;
 	bottom: -15px;
+}
+
+section, footer{
+	padding: 7rem 3rem;
+	background: var(--section-bg);
+	color: var(--white-text);
 }
 
 p{
@@ -64,11 +94,12 @@ li{
 /*HEADER*/
 
 header{
-	padding: 2rem 30px;
-	background: var(--nav-bg);
+	padding: 1rem 30px;
+	background: var(--section-bg);
 	color: var(--white-text);
 	position: sticky;
 	top: 0;
+	z-index: 2;
 }
 
 header nav{
@@ -94,7 +125,7 @@ header nav ul li::after{
 	height: 5px;
 	background: var(--secondary-color);
 	position: absolute;
-	bottom: -2rem;
+	bottom: -1rem;
 	left: 0;
 }
 
@@ -106,7 +137,7 @@ header nav ul li:hover::after{
 	content: '';
 }
 
-main .front .wrapper .front-text::before{
+main .about .wrapper .about-content .about-text::before, main .front .wrapper .front-text::before{
 	content: '';
 	width: 20px;
 	height: 100%;
@@ -120,9 +151,8 @@ main .front .wrapper .front-text::before{
 /*FRONT*/
 
 main .front{
-	height: 95vh;
+	height: 90vh;
 	padding: 0 3rem;
-	background: var(--nav-bg);
 } 
 
 main .front .wrapper{
@@ -162,6 +192,115 @@ main .front .wrapper .front-text p{
 	text-align: justify;
 }
 
+/*ABOUT*/
+
+main .about .wrapper .about-content{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+main .about .wrapper .about-content .about-text{
+	width: 50%;
+	margin: 0 30px;
+	align-self: flex-start;
+	position: relative;
+}
+
+main .about .wrapper .about-content .about-img{
+	width: 30%;
+	margin: 0 30px;
+}
+
+main .about .wrapper .about-content .about-img img{
+	width: 100%;
+}
+
+
+/*SERVICES*/
+
+main .services .wrapper .services-card{
+	display: flex;
+}
+
+main .services .wrapper .services-card .card{
+	padding: 1rem 2rem;
+	margin: 1rem 2rem;
+	box-shadow: 0 0 30px 0 rgba(84, 255, 231, .3);
+}
+
+main .services .wrapper .services-card .card img{
+
+}
+
+main .services .wrapper .services-card .card h3{
+	margin-bottom: 10px;
+}
+
+main .services .wrapper .services-card .card p{
+
+}
+
+/*PROJECTS*/
+
+main .projects .wrapper .projects-card{
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+main .projects .wrapper .projects-card .card{
+	position: relative;
+	overflow: hidden;
+	display: flex;
+}
+
+main .projects .wrapper .projects-card .card:hover .overlay{
+	opacity: 1;
+}
+
+main .projects .wrapper .projects-card .card:hover .demo-btn{
+	transform: translate(-50%, -50%) scale(1);
+	opacity: 1;
+}
+
+main .projects .wrapper .projects-card .card:hover .demo-img{
+	transform: scale(.9);
+}
+
+main .projects .wrapper .projects-card .card .demo-img{
+	width: 100%;
+	height: 100%;
+	transition: all 200ms ease-in-out;
+}
+
+main .projects .wrapper .projects-card .card .overlay{
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0,0,0,.5);
+	transition: all 200ms ease-in-out;
+}
+
+main .projects .wrapper .projects-card .card .demo-btn{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	cursor: pointer;
+	border: solid 1px var(--secondary-color);
+	color: var(--white-text);
+	font-size: 1.4rem;
+	padding: 10px 20px;
+	background: none;
+	border-radius: 5px;
+	z-index: 2;
+	opacity: 0;
+	transition: all 200ms ease-in-out;
+}
+
 /*MEDIA QUERIES*/
 
 @media (max-width: 1104px){
@@ -170,10 +309,10 @@ main .front .wrapper .front-text p{
 		display: none;
 		position: absolute;
 		left: 0;
-		top: 6rem;
+		top: 3.9rem;
 		right: 0;
 		flex-direction: column;
-		background: #262626;		
+		background: var(--section-bg);
 	}
 
 	.nav-content.toggle{
@@ -202,16 +341,45 @@ main .front .wrapper .front-text p{
 	main .front .wrapper .front-header h1{
 		font-size: 3rem;
 	}
+
+	main .about .wrapper .about-content{
+		flex-direction: column-reverse;
+	}
+
+	main .about .wrapper .about-content .about-text{
+		width: 95%;
+		margin: 3rem 0px;
+		align-self: center;
+		text-align: justify;
+	}
+
+	main .about .wrapper .about-content .about-img{
+		width: 60%;
+	}
+
+	main .services .wrapper .services-card{
+		flex-direction: column;
+	}
+
+	main .services .wrapper .services-card .card{
+		padding: 3rem 2rem;
+	}
 }
 
 @media (max-width: 765px){
 
-	main .front{
-		padding: 0;
+	section{
+		padding-right: 0 !important;
+		padding-left: 0 !important;
+	}
+
+	p{
+		font-size: .8rem !important;
+
 	}
 
 	main .front .wrapper .front-header h1{
-		font-size: 2rem;
+		font-size: 1.8rem;
 		font-weight: 500;
 	}
 
@@ -224,17 +392,16 @@ main .front .wrapper .front-text p{
 		margin-bottom: 5rem;
 		position: relative;
 	}
-
-	main .front .wrapper .front-text p{
-		font-size: .8rem;
-	}
-
 }
 
 @media (max-width: 425px){
 
 	.logo h4{
 		font-size: .8rem;
+	}
+
+	p{
+		line-height: 15px !important;	
 	}
 	
 	.logo h4::before{
@@ -262,8 +429,7 @@ main .front .wrapper .front-text p{
 		margin-bottom: 1rem;
 	}
 
-	main .front .wrapper .front-text p{
-		font-size: .7rem;
-		line-height: 15px;		
+	header nav ul li::after{
+		width: 0;
 	}
 }
