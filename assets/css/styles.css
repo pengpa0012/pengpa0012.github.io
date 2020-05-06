@@ -369,7 +369,7 @@ main .contact .wrapper .contact-img img{
 	}
 
 	main .about .wrapper .about-content .about-img{
-		width: 60%;
+		max-width: 60%;
 	}
 
 	main .services .wrapper .services-card{
@@ -422,9 +422,13 @@ main .contact .wrapper .contact-img img{
 		position: relative;
 	}
 
+	main .about .wrapper .about-content .about-text{
+		margin-top: 1rem;
+	}
+
 	main .about .wrapper .about-content .about-img{
-		max-width: 50%;
-		margin: 50px 30px;
+		max-width: 80%;
+		margin: 20px 30px;
 	}
 
 	main .projects .wrapper .projects-card{
