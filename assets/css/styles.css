@@ -23,7 +23,7 @@ body{
 	cursor: pointer;
 }
 
-header nav, section .wrapper{
+header nav, section .wrapper, footer .wrapper{
 	max-width: 1400px;
 	width: 95%;
 	margin: auto;
@@ -93,6 +93,7 @@ span{
 
 li{
 	list-style: none;
+	font-weight: 200;
 }
 
 /*HEADER*/
@@ -270,6 +271,8 @@ main .projects .wrapper .projects-card .card .card-img img{
 
 main .projects .wrapper .projects-card .card .card-text h4{
 	color: var(--secondary-color);
+	margin: 5px 0px;
+	font-weight: 500;
 }
 
 main .projects .wrapper .projects-card .card .card-text p{
@@ -294,26 +297,6 @@ main .projects .wrapper .projects-card .card .card-text .demo-btn:hover{
 	border: solid 1px var(--secondary-color);
 	color: var(--white-text);
 	background: transparent;
-}
-
-/*CONTACTS*/
-
-main .contact .wrapper .contact-content{
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
-}
-
-main .contact .wrapper .contact-text{
-	width: 50%;
-}
-
-main .contact .wrapper .contact-img{
-	width: 50%;
-}
-
-main .contact .wrapper .contact-img img{
-	width: 100%;
 }
 
 /*MEDIA QUERIES*/
@@ -440,6 +423,32 @@ main .contact .wrapper .contact-img img{
 		padding: 1rem;
 		text-align: center;
 	}
+
+	main .contact .wrapper .contact-content{
+		flex-direction: column;
+	}
+
+	main .contact .wrapper .contact-list{
+		text-align: center;
+		width: 100%;
+	}
+
+	main .contact .wrapper .contact-img{
+		width: 80%;
+	}
+
+	footer{
+		padding: 5rem 0rem;
+	}
+
+	footer .wrapper{
+		flex-direction: column;
+	}
+
+	footer .wrapper .column{
+		margin: 2rem 0;
+	}
+
 }
 
 @media (max-width: 425px){
@@ -464,7 +473,7 @@ main .contact .wrapper .contact-img img{
 		margin: 5px 0px;
 	}
 
-	.nav-content li{
+	li{
 		font-size: .8rem;
 		margin: 10px 0px;
 	}
@@ -485,7 +494,7 @@ main .contact .wrapper .contact-img img{
 		width: 30px;
 	}
 
-	main .services .wrapper .services-card .card .card-text h3{
+	main .services .wrapper .services-card .card .card-text h3, main .contact .wrapper .contact-list h3{
 		font-size: .8rem;
 	}
 }
