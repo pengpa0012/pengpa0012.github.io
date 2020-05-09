@@ -355,6 +355,45 @@ main .skill .wrapper .skill-content .skill-img img{
 	width: 100%;
 }
 
+/*CONTACTS*/
+
+main .contact .wrapper .contact-content{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+main .contact .wrapper .contact-list{
+	width: 50%;
+}
+
+main .contact .wrapper .contact-list .email, .number{
+	display: flex;
+	align-items: center;
+}
+
+main .contact .wrapper .contact-list .email h3, .number h3{
+	margin: 10px 5px;
+}
+
+main .contact .wrapper .contact-list .email .contact-box, .number .contact-box{
+	border: solid 1px var(--secondary-color);
+	color: var(--secondary-color);
+	padding: 10px 5px;
+	width: 100px;
+	text-align: center;
+}
+
+main .contact .wrapper .contact-img{
+	width: 50%;
+}
+
+main .contact .wrapper .contact-img img{
+	width: 100%;
+}
+
+
+
 /*MEDIA QUERIES*/
 
 @media (max-width: 1104px){
@@ -444,6 +483,19 @@ main .skill .wrapper .skill-content .skill-img img{
 	main .skill .wrapper .skill-content .skill-card .card .card-language{
 		margin-bottom: 1rem;
 	}
+
+	main .contact .wrapper .contact-content{
+		flex-direction: column-reverse;
+	}
+
+	main .contact .wrapper .contact-list{
+		width: 100%;
+	}
+
+	main .contact .wrapper .contact-img{
+		width: 80%;
+		margin-bottom: 2rem;
+	}
 }
 
 @media (max-width: 765px){
@@ -504,19 +556,6 @@ main .skill .wrapper .skill-content .skill-img img{
 	main .services .wrapper .services-card .card{
 		padding: 1rem;
 		text-align: center;
-	}
-
-	main .contact .wrapper .contact-content{
-		flex-direction: column;
-	}
-
-	main .contact .wrapper .contact-list{
-		text-align: center;
-		width: 100%;
-	}
-
-	main .contact .wrapper .contact-img{
-		width: 80%;
 	}
 
 	footer{
