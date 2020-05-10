@@ -392,7 +392,31 @@ main .contact .wrapper .contact-img img{
 	width: 100%;
 }
 
+/*FOOTER*/
 
+footer{
+	padding: 5rem 3rem;
+}
+
+footer .wrapper{
+	display: flex;
+	justify-content: space-between;
+}
+
+footer .wrapper .column h5{
+	margin-bottom: 10px;
+	color: var(--secondary-color);
+	font-weight: 500;
+	font-size: 1.1rem;
+}
+
+footer .wrapper .column ul li{
+	cursor: pointer;
+}
+
+footer .wrapper .column ul li:hover{
+	color: var(--secondary-color);
+}
 
 /*MEDIA QUERIES*/
 
