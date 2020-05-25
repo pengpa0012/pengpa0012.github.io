@@ -611,6 +611,9 @@ footer .wrapper .column ul li:hover{
 }
 
 @media (max-width: 425px){
+	.nav-content{
+		top: 2.9rem;
+	}
 
 	.logo h4{
 		font-size: .8rem;
