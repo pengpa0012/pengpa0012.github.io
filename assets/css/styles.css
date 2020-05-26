@@ -87,7 +87,6 @@ p{
 }
 
 span{
-	font-weight: bold;
 	color: var(--secondary-color);
 	font-weight: 200;
 }
@@ -299,14 +298,14 @@ main .projects .wrapper .projects-card .card .card-text .tags{
 }
 
 main .projects .wrapper .projects-card .card .card-text .tags h5{
-	margin-right: 5px;
-	font-weight: 200;
+	margin-right: 10px;
+	font-weight: 300;
 }
 
 main .projects .wrapper .projects-card .card .card-text .tags span{
 	color: #fff;
 	border: dotted 1px var(--secondary-color);
-	font-size: .8rem;
+	font-size: .6rem;
 	border-radius: 5px;
 	padding: 5px;
 	margin-right: 5px;
