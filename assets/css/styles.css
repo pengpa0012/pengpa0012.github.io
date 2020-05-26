@@ -252,21 +252,21 @@ main .projects .wrapper h2{
 }
 
 main .projects .wrapper .projects-card{
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-	width: 70%;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	width: 80%;
 	margin: auto;
-	grid-gap: 40px;
 }
 
 main .projects .wrapper .projects-card .card{
 	display: flex;
-	flex-direction: column;
-	box-shadow: 0 10px 30px 0 rgba(84, 255, 231, .1);
+	justify-content: space-between;
+	margin-bottom: 4rem;
 }
 
 main .projects .wrapper .projects-card .card .card-img{
-	width: 100%;
+	width: 45%;
 }
 
 main .projects .wrapper .projects-card .card .card-img img{
@@ -274,37 +274,64 @@ main .projects .wrapper .projects-card .card .card-img img{
 }
 
 main .projects .wrapper .projects-card .card .card-text{
-	padding: 1.5rem 1rem;
+	padding: 0rem 2rem;
+	width: 50%;
 }
 
 main .projects .wrapper .projects-card .card .card-text h4{
 	color: var(--secondary-color);
-	margin-bottom: 10px;
+	margin-bottom: 30px;
+	font-size: 2rem;
 	font-weight: 500;
 }
 
 main .projects .wrapper .projects-card .card .card-text p{
-	font-size: .8rem;
-	line-height: 20px;
-	margin-bottom: 5px;
+	font-size: 1rem;
+	line-height: 25px;
+	margin-bottom: 15px;
+	color: #ccc;
 }
 
-main .projects .wrapper .projects-card .card .card-text .demo-btn{
+main .projects .wrapper .projects-card .card .card-text .tags{
+	margin-bottom: 10px;
+	display: flex;
+	align-items: center;
+}
+
+main .projects .wrapper .projects-card .card .card-text .tags h5{
+	margin-right: 5px;
+	font-weight: 200;
+}
+
+main .projects .wrapper .projects-card .card .card-text .tags span{
+	color: #fff;
+	border: dotted 1px var(--secondary-color);
+	font-size: .8rem;
+	border-radius: 5px;
+	padding: 5px;
+	margin-right: 5px;
+}
+
+main .projects .wrapper .projects-card .card .card-text .btn-flex{
+	display: flex;
+}
+
+main .projects .wrapper .projects-card .card .card-text .btn{
 	cursor: pointer;
-	border: solid 1px transparent;
-	color: var(--white-text);
 	padding: 5px 10px;
-	background: var(--secondary-color);
-	color: #000;
+	border: solid 1px var(--secondary-color);
+	color: var(--secondary-color);
+	background: transparent;
 	border-radius: 5px;
 	outline: none;
-	margin-top: 10px;
+	margin: 10px 8px 0 0;
+	font-size: 1rem;
 }
 
-main .projects .wrapper .projects-card .card .card-text .demo-btn:hover{
+main .projects .wrapper .projects-card .card .card-text .btn:hover{
 	border: solid 1px var(--secondary-color);
-	color: var(--white-text);
-	background: transparent;
+	color: #000;
+	background: var(--secondary-color);
 }
 
 /*SKILLS*/
@@ -430,6 +457,41 @@ footer .wrapper .column ul li:hover{
 
 /*MEDIA QUERIES*/
 
+@media (max-width: 700px){
+
+	.projects .wrapper{
+		width: 100%;
+	}
+
+	.projects .wrapper .projects-card{
+		width: 95%;
+	}
+
+	.projects .wrapper .projects-card .card .card-img{
+		width: 85%;
+		margin-bottom: 20px;
+	}
+
+	.projects .wrapper .projects-card .card .card-text{
+		width: 100%;
+		padding: 0;
+	}
+
+	.projects .wrapper .projects-card .card .card-text h4{
+		font-size: 1.5rem;
+		margin-bottom: 15px;
+	}
+
+	.projects .wrapper .projects-card .card .card-text p{
+		font-size: .9rem;
+		line-height: 20px;
+	}
+
+	.projects .wrapper .projects-card .card .card-text .btn{
+		font-size: .8rem;
+	}
+}
+
 @media (max-width: 1104px){
 
 	.nav-content{
@@ -490,6 +552,38 @@ footer .wrapper .column ul li:hover{
 
 	main .services .wrapper .services-card .card{
 		padding: 3rem 2rem;
+	}
+
+	main .projects{
+		padding: 7rem 10px;
+	} 
+
+	main .projects .wrapper .projects-card{
+		width: 80%;
+	}
+
+	main .projects .wrapper .projects-card .card{
+		flex-direction: column-reverse;
+		align-items: center;
+		text-align: center;
+		margin-bottom: 5rem;
+	}
+
+	main .projects .wrapper .projects-card .card .card-img{
+		width: 75%;
+		margin-bottom: 2rem;
+	}
+
+	main .projects .wrapper .projects-card .card .card-text{
+		width: 95%;
+	}
+
+	main .projects .wrapper .projects-card .card .card-text .tags{
+		justify-content: center;
+	}
+
+	main .projects .wrapper .projects-card .card .card-text .btn-flex{
+		justify-content: center;
 	}
 
 	main .skill .wrapper .skill-content{
@@ -578,6 +672,38 @@ footer .wrapper .column ul li:hover{
 		position: relative;
 	}
 
+	main .projects .wrapper{
+		width: 100%;
+	}
+
+	main .projects .wrapper .projects-card{
+		width: 95%;
+	}
+
+	main .projects .wrapper .projects-card .card .card-img{
+		width: 85%;
+		margin-bottom: 20px;
+	}
+
+	main .projects .wrapper .projects-card .card .card-text{
+		width: 100%;
+		padding: 0;
+	}
+
+	main .projects .wrapper .projects-card .card .card-text h4{
+		font-size: 1.5rem;
+		margin-bottom: 15px;
+	}
+
+	main .projects .wrapper .projects-card .card .card-text p{
+		font-size: .9rem;
+		line-height: 20px;
+	}
+
+	main .projects .wrapper .projects-card .card .card-text .btn{
+		font-size: .8rem;
+	}
+
 	main .about .wrapper .about-content .about-text{
 		margin-top: 1rem;
 	}
@@ -585,11 +711,6 @@ footer .wrapper .column ul li:hover{
 	main .about .wrapper .about-content .about-img{
 		max-width: 80%;
 		margin: 20px 30px;
-	}
-
-	main .projects .wrapper .projects-card{
-		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-		width: 95%;
 	}
 
 	main .services .wrapper .services-card .card{
@@ -658,6 +779,10 @@ footer .wrapper .column ul li:hover{
 
 	main .services .wrapper .services-card .card .card-text h3, main .contact .wrapper .contact-list h3{
 		font-size: .8rem;
+	}
+
+	main .projects .wrapper .projects-card .card .card-text .tags span{
+		font-size: .6rem;
 	}
 
 	main .skill .wrapper .skill-content .skill-card .card .card-skill-list ul li{
