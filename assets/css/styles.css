@@ -14,6 +14,7 @@ body{
 	--section-bg: #262626;
 	--white-text: #EFEFEF;
 	--secondary-color: #54ffe7;
+	overflow-x: hidden;
 }
 
 /*GLOBAL*/
@@ -631,6 +632,10 @@ footer .wrapper .column ul li:hover{
 }
 
 @media (max-width: 765px){
+
+	section, footer{
+		padding: 1rem 0;
+	}	
 
 	h2{
 		font-size: 1.5rem;
