@@ -6,6 +6,7 @@
 	<title>Godfrey Necesario</title>
 	<link rel="stylesheet" href="./assets/css/styles.css">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500&display=swap" rel="stylesheet">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<script src="./assets/js/script.js" defer></script>
 </head>
 <body>
@@ -42,10 +43,10 @@
 			<div class="wrapper">
 				<h2>About</h2>
 				<div class="about-content">
-					<div class="about-text">				
+					<div class="about-text" data-aos="fade-right" data-aos-duration="1500">				
 						<p><span class="colored-text">Lorem ipsum </span>dolor sit amet, consectetur adipisicing elit. Nam necessitatibus esse doloremque totam consequatur voluptate eaque quas sapiente dolor a. Molestias quia cum incidunt perspiciatis hic asperiores illum ratione accusamus est, doloremque cumque optio cupiditate possimus iusto vero doloribus quibusdam deleniti numquam, recusandae eveniet obcaecati voluptas quas quasi similique! Esse, corporis. Nobis quam quia eum quo, voluptas quaerat optio porro.</p>
 					</div>
-					<div class="about-img">
+					<div class="about-img" data-aos="fade-left" data-aos-duration="1500">
 						<img src="./assets/images/about-img.jpg">
 					</div>
 				</div>	
@@ -55,21 +56,21 @@
 			<div class="wrapper">
 				<h2>Services</h2>
 				<div class="services-card">
-					<div class="card">
+					<div class="card" data-aos="zoom-in" data-aos-duration="1000">
 						<img src="./assets/images/graphic-tool.svg">
 						<div class="card-text">
 							<h3>Layout</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, quisquam, nesciunt. Assumenda?</p>
 						</div>				
 					</div>
-					<div class="card">
+					<div class="card" data-aos="zoom-in" data-aos-duration="1000">
 						<img src="./assets/images/design-tool.svg">
 						<div class="card-text">
 							<h3>Static Website</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, quisquam, nesciunt. Assumenda?</p>
 						</div>					
 					</div>
-					<div class="card">
+					<div class="card" data-aos="zoom-in" data-aos-duration="1000">
 						<img src="./assets/images/web-design.svg">
 						<div class="card-text">
 							<h3>Web Design</h3>
@@ -82,7 +83,7 @@
 		<section class="projects">
 		<div class="wrapper">
 			<h2>Projects</h2>
-			<div class="projects-card">
+			<div class="projects-card" data-aos="fade-up-left" data-aos-duration="1800">
 				<div class="card">	
 					<div class="card-text">
 						<h4>Piano</h4>
@@ -104,8 +105,8 @@
 					</div>			
 				</div>		
 			</div>
-			<div class="projects-card">
-				<div class="card">	
+			<div class="projects-card" data-aos="fade-up-right" data-aos-duration="1800">
+				<div class="card" data-aos="fade-up">	
 					<div class="card-text">
 						<h4>Predict & Click</h4>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiasreiciendis, est eum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiasreiciendis, est eum!</p>
@@ -125,7 +126,7 @@
 					</div>			
 				</div>		
 			</div>
-			<div class="projects-card">
+			<div class="projects-card" data-aos="fade-up-left" data-aos-duration="1800">
 				<div class="card">	
 					<div class="card-text">
 						<h4>Drum pad</h4>
@@ -147,7 +148,7 @@
 					</div>			
 				</div>		
 			</div>
-			<div class="projects-card">
+			<div class="projects-card" data-aos="fade-up-right" data-aos-duration="1800">
 				<div class="card">	
 					<div class="card-text">
 						<h4>Stopwatch</h4>
@@ -174,7 +175,7 @@
 		<section class="skill">		
 			<div class="wrapper">
 				<h2>Skills</h2>
-				<div class="skill-content">
+				<div class="skill-content"  data-aos="fade-left" data-aos-duration="1500">
 					<div class="skill-card">
 						<div class="card">
 							<div class="card-language">
@@ -215,7 +216,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="skill-img">
+					<div class="skill-img" data-aos="flip-right" data-aos-duration="1500">
 						<img src="./assets/images/skill-img.svg">
 					</div>
 				</div>	
@@ -224,7 +225,7 @@
 		<section class="contact">
 			<div class="wrapper">
 				<h2>Contact</h2>
-				<div class="contact-content">
+				<div class="contact-content" data-aos="fade-left" data-aos-duration="1500">
 					<div class="contact-list">
 						<div class="email">
 							<h3 class="contact-box">Email</h3>
@@ -235,7 +236,7 @@
 							<h3>+63 939 51 408 07</h3>
 						</div>
 					</div>
-					<div class="contact-img">
+					<div class="contact-img" data-aos="flip-right" data-aos-duration="1500">
 						<img src="./assets/images/contact-img.svg">
 					</div>
 				</div>	
@@ -271,11 +272,20 @@
 			</div>
 		</div>
 	</footer>	
+
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+	  AOS.init();
+	</script>
 </body>
 </html>
 <!--
 	Todo:
 		Add scroll effect library
-		adjust font sizes
-		
+		fixed img on project
+		add content 
+		enchance the ux
+		add content on contact section
+		enchance white spaces
+		add scroll effect on navbar
 -->
