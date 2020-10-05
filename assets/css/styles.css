@@ -510,6 +510,7 @@ footer .wrapper p, h5{
 
 	.works .wrapper .work-grid{
 		margin: 0 0rem 5rem 0rem;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	}
 
 	.works .wrapper .work-grid .work-box{
