@@ -11,11 +11,11 @@
 <body>
 	<header>	
 		<nav>
-			<img class="logo" src="./assets/images/Logo.svg">
+			<a href="index.html"><img class="logo" src="./assets/images/Logo.svg"></a>
 			<ul class="nav-list">
-				<a href="#Contact"><li>Contact</li></a>
 				<a href="#About"><li>About</li></a>
-				<a href="#Hire-me"><li>Hire me?</li></a>
+				<a href="#Contact"><li>Contact</li></a>			
+				<a href="#Contact"><li>Hire me?</li></a>
 			</ul>
 			<div class="nav-burger">
 				<div class="line"></div>
@@ -27,12 +27,14 @@
 	<section class="banner">
 		<div class="wrapper">
 			<div class="banner-text">
-				<h1>Hi! i'm Godfrey Necesario</h1>
-				<p class="primary-text">Front end Developer / Web Designer</p>
-				<div class="buttons">
-					<a href="#work"><button class="primary-bg">My Works</button></a>
-					<button>Download my CV</button>
-				</div>
+				<h1 class="heading">Hi! i'm Godfrey Necesario</h1>
+				<div class="sub-heading">
+					<p class="primary-text">Front end Developer / Web Designer</p>
+					<div class="buttons">
+						<a href="#work"><button class="primary-bg">My Works</button></a>
+						<button>Download my CV</button>
+					</div>
+				</div>			
 			</div>
 		</div>
 	</section>
@@ -40,10 +42,10 @@
 		<div class="wrapper">
 			<h2>About</h2>
 			<div class="upper">
-				<div class="about-img">
+				<div class="about-img left">
 					<img src="./assets/images/person.jpg">
 				</div>
-				<div class="about-info">
+				<div class="about-info right">
 					<div class="text">
 						<h4>Brief Background</h4>
 					    <p>I'm a student from Cainta, Rizal Philippines, im currently on my third year of college learning front-end technologies and building static websites. I also design and make layouts for websites from scratch.</p>
@@ -57,11 +59,11 @@
 			<div class="lower">
 				<h3>How i started coding...</h3>
 				<div class="flex">
-					<div class="text">
+					<div class="text left">
 						<p>It started back on 2018 when i saw a student on net cafe where i always play online games, typing some code on sublime editor and building website. I was fascinated back then that by coding you can create your own stuff and let your creativity explore.</p>
 						<p>I first started to study c++ i learned some of the basic stuff and did some simple programs with it, and then i learned how to build websites using Html and Css i really got into designing stuff because i like styling things and playing around with colors.</p>
 					</div>
-					<div class="image">
+					<div class="image right">
 						<svg viewBox="0 0 768 596" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<g id="thinking 1">
 						<g id="Group">
@@ -76,16 +78,16 @@
 						<path id="Vector_9" d="M316.421 238.526C345.979 238.526 369.941 214.564 369.941 185.006C369.941 155.449 345.979 131.487 316.421 131.487C286.864 131.487 262.902 155.449 262.902 185.006C262.902 214.564 286.864 238.526 316.421 238.526Z" fill="#C8C8C8"/>
 						<path id="Vector_10" d="M625 572.996H0.999969V574.996H625V572.996Z" fill="#3F3D56"/>
 						</g>
-						<g id="solid-circle">
+						<g id="solid-circle" class="dot">
 						<path id="Vector_11" d="M540.541 202.152C552.691 202.152 562.541 192.303 562.541 180.152C562.541 168.002 552.691 158.152 540.541 158.152C528.391 158.152 518.541 168.002 518.541 180.152C518.541 192.303 528.391 202.152 540.541 202.152Z"/>
 						</g>
 						<g id="line-circle">
 						<path id="Vector_12" d="M534.897 195.81C532.131 192.198 530.499 187.847 530.206 183.308C529.913 178.768 530.973 174.244 533.251 170.307C535.53 166.369 538.925 163.196 543.007 161.189C547.089 159.181 551.674 158.429 556.184 159.027C560.693 159.625 564.924 161.548 568.341 164.55C571.758 167.553 574.208 171.502 575.38 175.897C576.553 180.292 576.396 184.937 574.93 189.243C573.463 193.549 570.753 197.323 567.141 200.089C562.295 203.79 556.179 205.419 550.134 204.617C544.089 203.814 538.609 200.647 534.897 195.81ZM569.832 169.06C567.307 165.763 563.86 163.288 559.929 161.948C555.997 160.609 551.757 160.466 547.744 161.537C543.731 162.608 540.125 164.845 537.384 167.965C534.642 171.084 532.887 174.947 532.341 179.065C531.794 183.182 532.481 187.369 534.314 191.096C536.147 194.823 539.045 197.922 542.639 200.003C546.234 202.083 550.365 203.051 554.51 202.784C558.655 202.516 562.627 201.026 565.925 198.501C570.342 195.111 573.233 190.107 573.966 184.588C574.698 179.069 573.211 173.485 569.832 169.06Z" fill="#3F3D56"/>
 						</g>
-						<g id="solid-square-two">
+						<g id="solid-square-two" class="dot">
 						<path id="Vector_13" d="M684.213 1.07922L658.806 20.5334L678.26 45.9408L703.668 26.4866L684.213 1.07922Z"/>
 						</g>
-						<g id="solid-square-one">
+						<g id="solid-square-one" class="dot">
 						<path id="Vector_14" d="M738.995 179.542L713.588 198.996L733.042 224.404L758.449 204.949L738.995 179.542Z"/>
 						</g>
 						<g id="line-square-two">
@@ -111,15 +113,15 @@
 		<div class="wrapper">
 			<h2>Languages and tools i used</h2>
 			<div class="tools-grid">
-				<img src="./assets/images/html.svg" alt="icon">
-				<img src="./assets/images/css.svg" alt="icon">
-				<img src="./assets/images/javascript.svg" alt="icon">
-				<img src="./assets/images/bootstrap.svg" alt="icon">
-				<img src="./assets/images/git.svg" alt="icon">
-				<img src="./assets/images/npm.svg" alt="icon">
-				<img src="./assets/images/yarn.svg" alt="icon">
-				<img src="./assets/images/github.svg" alt="icon">
-				<img src="./assets/images/vue.svg" alt="icon">
+				<img class="left" src="./assets/images/html.svg" alt="icon">
+				<img class="left" src="./assets/images/css.svg" alt="icon">
+				<img class="left" src="./assets/images/javascript.svg" alt="icon">
+				<img class="right" src="./assets/images/bootstrap.svg" alt="icon">
+				<img class="right" src="./assets/images/git.svg" alt="icon">
+				<img class="left" src="./assets/images/npm.svg" alt="icon">
+				<img class="left" src="./assets/images/yarn.svg" alt="icon">
+				<img class="right" src="./assets/images/github.svg" alt="icon">
+				<img class="right" src="./assets/images/vue.svg" alt="icon">
 			</div>
 		</div>
 	</section>
@@ -127,7 +129,7 @@
 		<div class="wrapper">
 			<h2>My Works</h2>
 			<div class="work-grid">
-				<div class="work-box">
+				<div class="work-box left">
 					<div class="img">
 						<img src="./assets/images/html.svg" alt="icon">
 					</div>
@@ -150,7 +152,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="work-box">
+				<div class="work-box right">
 					<div class="img">
 						<img src="./assets/images/html.svg" alt="icon">
 					</div>
@@ -173,7 +175,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="work-box">
+				<div class="work-box left">
 					<div class="img">
 						<img src="./assets/images/html.svg" alt="icon">
 					</div>
@@ -196,7 +198,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="work-box">
+				<div class="work-box right">
 					<div class="img">
 						<img src="./assets/images/html.svg" alt="icon">
 					</div>
@@ -219,7 +221,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="work-box">
+				<div class="work-box left">
 					<div class="img">
 						<img src="./assets/images/html.svg" alt="icon">
 					</div>
@@ -242,7 +244,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="work-box">
+				<div class="work-box right">
 					<div class="img">
 						<img src="./assets/images/html.svg" alt="icon">
 					</div>
@@ -275,7 +277,7 @@
 		<div class="wrapper">
 			<h2>Contact me</h2>
 			<div class="flex">
-				<div class="contact-list">
+				<div class="contact-list left">
 					<ul>
 						<li>
 							<img src="./assets/images/mail.svg">
@@ -291,7 +293,7 @@
 						</li>
 					</ul>
 				</div>
-				<div class="contact-img">
+				<div class="contact-img right">
 					<img src="./assets/images/contact.svg" alt="">
 				</div>				
 			</div>
