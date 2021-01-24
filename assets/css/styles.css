@@ -67,7 +67,7 @@ header nav, section .wrapper, footer .wrapper{
 }
 
 h1{
-	font-size: 3rem;
+	font-size: 3.5rem;
 	font-weight: 300;
 }
 
@@ -112,6 +112,21 @@ button:hover{
 	justify-content: space-between;
 }
 
+.overlay{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	pointer-events: none;
+	transition: all 200ms ease-in;
+}
+
+.overlay.active{
+	pointer-events: all;
+	background: rgba(0,0,0,.5);
+}
+
 /* Header */
 
 header{
@@ -131,6 +146,11 @@ header nav{
 }	
 
 header nav .logo{
+	display: flex;
+	align-items: center;
+}
+
+header nav .logo img{
 	width: 40px;
 	cursor: pointer;
 }
@@ -271,19 +291,70 @@ header nav ul a:hover{
 	margin: 0 2rem 5rem 2rem;
 }
 
+.works .wrapper .project-display{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	transition: 250ms ease-in;
+	width: 80%;
+}
+
+.works .wrapper .project-display.active{
+	transform: translate(-50%, -50%) scale(1);
+	z-index: 5;
+}
+
+.works .wrapper .project-display img{
+	width: 100%;
+}
+
 .works .wrapper .work-grid .work-box{
 	display: flex;
 	padding: 1rem;
-	background: var(--white-text);
+	background: #fff;
 }
 
 .works .wrapper .work-grid .work-box .img{
 	margin-right: 1rem;
 	width: 50%;
+	position: relative;
 }
 
 .works .wrapper .work-grid .work-box .img img{
 	width: 100%;
+	height: 100%;
+}
+
+.works .wrapper .work-grid .work-box .img:hover .expand{
+	transform: translate(-50%, -50%) scale(1);
+}
+
+.works .wrapper .work-grid .work-box .img:hover .img-overlay{
+	opacity: 1;
+}
+
+.works .wrapper .work-grid .work-box .img .expand{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	width: 25px;
+	height: 25px;
+	cursor: pointer;
+	z-index: 2;
+	transition: 250ms ease-in;
+}
+
+.works .wrapper .work-grid .work-box .img .img-overlay{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0,0,0,.3);
+	opacity: 0;
+	transition: 250ms ease-in;
 }
 
 .works .wrapper .work-grid .work-box .info{
@@ -403,21 +474,6 @@ footer .wrapper h5{
 /* Media Queries */
 
 @media (max-width: 950px){
-
-	.overlay{
-		position: fixed;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		pointer-events: none;
-		transition: all 200ms ease-in;
-	}
-
-	.overlay.active{
-		pointer-events: all;
-		background: rgba(0,0,0,.5);
-	}
 
 	.nav-burger{
 		display: block;
@@ -566,7 +622,12 @@ footer .wrapper h5{
 	}
 
 	.works .wrapper .work-grid .work-box .img{
-		width: 50%;
+		margin-bottom: 2rem;
+		margin-right: 0;
+	}
+
+	.works .wrapper .project-display{
+		width: 95%;
 	}
 
 	footer{

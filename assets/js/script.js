@@ -7,20 +7,32 @@ const overlay = document.querySelector('.overlay')
 
 navBurger.addEventListener('click', ()=>{
 	navList.classList.toggle('active')
-	overlay.classList.toggle('active')
 })
 
 navLinks.forEach(li => {
 	li.addEventListener('click', ()=>{
 		navList.classList.toggle('active')
-		overlay.classList.toggle('active')
 	})
 })
 
 
 overlay.addEventListener('click', ()=>{
-	navList.classList.toggle('active')
-	overlay.classList.toggle('active')
+	displayWrapper.classList.toggle('active')
+	overlay.classList.toggle('active')	
+})
+
+// Project Expand Function
+
+const expandBtn = document.querySelectorAll('.expand')
+const displayImg = document.querySelector('.project-display img')
+const displayWrapper = document.querySelector('.project-display')
+
+expandBtn.forEach(btn => {
+	btn.addEventListener('click', e => {
+		displayWrapper.classList.toggle('active')
+		displayImg.src = e.target.previousElementSibling.attributes[0].nodeValue
+		overlay.classList.toggle('active')	
+	})
 })
 
 // Svg Animation
