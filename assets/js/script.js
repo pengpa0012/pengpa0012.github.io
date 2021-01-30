@@ -35,6 +35,37 @@ expandBtn.forEach(btn => {
 	})
 })
 
+// Floating labels
+
+const inputLabel = document.querySelectorAll('[data-label]')
+const inputField = document.querySelectorAll('[data-input]')
+
+class Label{
+	constructor(input, field){
+		this.input = input
+		this.field = field
+		floatLabel(this)
+	}
+}
+
+function floatLabel(label){
+	label.input.forEach(el => {
+		el.addEventListener('focus', e => {
+			const labelText = e.target.offsetParent.children[0]
+			labelText.classList.add('active')
+			el.classList.add('active')
+		})
+		el.addEventListener('blur', e => {	
+			if(e.target.value != "") return		
+			e.target.offsetParent.children[0].classList.remove('active')	
+			el.classList.remove('active')
+			console.log(e.target.offsetParent.children[0])
+		})
+	})
+}
+
+const float = new Label(inputField, inputLabel)
+
 // Svg Animation
 
 const dot = document.querySelectorAll('.dot')
@@ -93,29 +124,7 @@ function completed(){
 
 window.addEventListener('load', ()=>{
 	const subHeading = document.querySelector('.sub-heading')
-
+	const bannerImg = document.querySelector('.banner-img')
 	subHeading.classList.add('fade')
-
-})
-
-// Sections Animation on Scroll
-
-window.addEventListener('scroll', ()=>{
-	const allLeft = document.querySelectorAll('.left')
-	let screenPos = window.innerHeight / 1.5
-
-	allLeft.forEach(left => {
-		let leftPos = left.getBoundingClientRect().top
-		if(leftPos < screenPos) left.classList.add('active')
-		if(leftPos > screenPos) left.classList.remove('active')	
-
-	})
-
-	const allRight = document.querySelectorAll('.right')
-
-	allRight.forEach(right => {
-		let rightPos = right.getBoundingClientRect().top
-		if(rightPos < screenPos) right.classList.add('active')
-		if(rightPos > screenPos) right.classList.remove('active')	
-	})
+	bannerImg.classList.add('fade')
 })

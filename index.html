@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Godfrey Necesario</title>
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="./assets/css/styles.css">
 	<script src="./assets/js/script.js" defer></script>
@@ -30,38 +31,48 @@
 					<p class="primary-text">Front end Developer / Web Designer</p>
 					<div class="buttons">
 						<a href="#work"><button class="primary-bg">My Works</button></a>
-						<button>Download my CV</button>
+						<button class="secondary-bg">Download my CV</button>
 					</div>
 				</div>			
+			</div>
+			<div class="banner-img">
+				<img src="./assets/images/Web Developer_Outline.svg" alt="img">
 			</div>
 		</div>
 	</section>
 	<section class="about" id="About">
 		<div class="wrapper overflow-x-hidden">
-			<h2>About</h2>
+			<h2 data-aos="fade-up"
+			data-aos-duration="2000">About</h2>
 			<div class="upper">
-				<div class="about-img left">
+				<div class="about-img" data-aos="fade-right"
+				data-aos-duration="2000">
 					<img src="./assets/images/person.jpg">
 				</div>
-				<div class="about-info right">
-					<div class="text">
+				<div class="about-info">
+					<div class="text" data-aos="fade-left"
+					data-aos-duration="2000">
 						<h4>Brief Background</h4>
 					    <p>I'm a student from Cainta, Rizal Philippines, im currently on my third year of college learning front-end technologies and building static websites. I also design and make layouts for websites from scratch.</p>
 					</div>
-					<div class="text">
+					<div class="text" data-aos="fade-left"
+					data-aos-duration="2000">
 						<h4>My Interest</h4>
 					    <p>I really like making stuff by typing code, having to learn something new and applying those techniques on your craft, really expand my creativity and wanting to do some more.</p>
 					</div>
 				</div>
 			</div>
 			<div class="lower">
-				<h3>How i started coding...</h3>
+				<h3 data-aos="fade-right"
+				data-aos-duration="2000">How i started coding...</h3>
 				<div class="flex">
-					<div class="text left">
+					<div class="text" data-aos="fade-right"
+					data-aos-duration="2000">
 						<p>It started back on 2018 when i saw a student on net cafe where i always play online games, typing some code on sublime editor and building website. I was fascinated back then that by coding you can create your own stuff and let your creativity explore.</p>
 						<p>I first started to study c++ i learned some of the basic stuff and did some simple programs with it, and then i learned how to build websites using Html and Css i really got into designing stuff because i like styling things and playing around with colors.</p>
 					</div>
-					<div class="image right">
+					<div class="image" data-aos="fade-left"
+					data-aos-duration="2000">
 						<svg viewBox="0 0 768 596" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<g id="thinking 1">
 						<g id="Group">
@@ -107,27 +118,75 @@
 			</div>
 		</div>
 	</section>
-	<section class="tools overflow-x-hidden">
-		<div class="wrapper">
-			<h2>Languages and tools i used</h2>
+	<section class="tools">
+		<div class="wrapper overflow-x-hidden">
+			<h2 data-aos="fade-up"
+			data-aos-duration="2000">Languages and tools i used</h2>
 			<div class="tools-grid">
-				<img class="left" src="./assets/images/html.svg" alt="icon">
-				<img class="left" src="./assets/images/css.svg" alt="icon">
-				<img class="left" src="./assets/images/javascript.svg" alt="icon">
-				<img class="right" src="./assets/images/bootstrap.svg" alt="icon">
-				<img class="right" src="./assets/images/git.svg" alt="icon">
-				<img class="left" src="./assets/images/npm.svg" alt="icon">
-				<img class="left" src="./assets/images/yarn.svg" alt="icon">
-				<img class="right" src="./assets/images/github.svg" alt="icon">
-				<img class="right" src="./assets/images/vue.svg" alt="icon">
+				<div class="box" data-aos="fade-up"
+				data-aos-duration="2000">
+					<h4>Web Development</h4>
+					<div class="tools">
+						<div class="icon">
+							<span>Html</span>
+							<img src="./assets/images/html.svg" alt="icon">
+						</div>		
+						<div class="icon">
+							<span>Css</span>
+							<img src="./assets/images/css.svg" alt="icon">
+						</div>
+						<div class="icon">
+							<span>Javascript</span>
+							<img src="./assets/images/javascript.svg" alt="icon">
+						</div>
+					</div>
+				</div>
+				<div class="box" data-aos="fade-up"
+				data-aos-duration="2500">
+					<h4>Frameworks</h4>
+					<div class="tools">
+						<div class="icon">
+							<span>Bootsrap</span>
+							<img src="./assets/images/bootstrap.svg" alt="icon">
+						</div>
+						<div class="icon">
+							<span>Vue</span>
+							<img src="./assets/images/vue.svg" alt="icon">
+						</div>
+					</div>
+				</div>
+				<div class="box" data-aos="fade-up"
+				data-aos-duration="3000">
+					<h4>Other</h4>
+					<div class="tools">
+						<div class="icon">
+							<span>Git</span>
+							<img src="./assets/images/git.svg" alt="icon">
+						</div>
+						<div class="icon">
+							<span>Github</span>
+							<img src="./assets/images/github.svg" alt="icon">
+						</div>
+						<div class="icon">
+							<span>Npm</span>
+							<img src="./assets/images/npm.svg" alt="icon">
+						</div>
+						<div class="icon">
+							<span>Yarn</span>
+							<img src="./assets/images/yarn.svg" alt="icon">
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
 	<section class="works" id="work">
 		<div class="wrapper overflow-x-hidden">
-			<h2>My Works</h2>
+			<h2 data-aos="fade-up"
+			data-aos-duration="2000">My Works</h2>
 			<div class="work-grid">
-				<div class="work-box left">
+				<div class="work-box" data-aos="fade-right"
+				data-aos-duration="2000">
 					<div class="img">
 						<img src="./assets/images/photographer.PNG" alt="icon">
 						<img src="./assets/images/expand.svg" class="expand">
@@ -151,12 +210,13 @@
 								<button class="primary-bg">Demo</button>
 							</a>					
 							<a href="https://github.com/pengpa0012/photographer-website" target="_blank">
-								<button>View Code</button>
+								<button class="secondary-bg">View Code</button>
 							</a> 
 						</div>
 					</div>
 				</div>
-				<div class="work-box right">
+				<div class="work-box" data-aos="fade-left"
+				data-aos-duration="2000">
 					<div class="img">
 						<img src="./assets/images/shoe.png" alt="icon">
 						<img src="./assets/images/expand.svg" class="expand">
@@ -182,12 +242,13 @@
 								<button class="primary-bg">Demo</button>
 							</a>					
 							<a href="https://github.com/pengpa0012/shoe-website" target="_blank">
-								<button>View Code</button>
+								<button class="secondary-bg">View Code</button>
 							</a> 
 						</div>
 					</div>
 				</div>
-				<div class="work-box left">
+				<div class="work-box" data-aos="fade-right"
+				data-aos-duration="2000">
 					<div class="img">
 						<img src="./assets/images/nuxt.PNG" alt="icon">
 						<img src="./assets/images/expand.svg" class="expand">
@@ -215,12 +276,13 @@
 								<button class="primary-bg">Demo</button>
 							</a>					
 							<a href="https://github.com/pengpa0012/nuxt-multipage-website-template" target="_blank">
-								<button>View Code</button>
+								<button class="secondary-bg">View Code</button>
 							</a> 
 						</div>
 					</div>
 				</div>
-				<div class="work-box right">
+				<div class="work-box" data-aos="fade-left"
+				data-aos-duration="2000">
 					<div class="img">
 						<img src="./assets/images/weather.PNG" alt="icon">
 						<img src="./assets/images/expand.svg" class="expand">
@@ -246,12 +308,13 @@
 								<button class="primary-bg">Demo</button>
 							</a>					
 							<a href="https://github.com/pengpa0012/weather-app" target="_blank">
-								<button>View Code</button>
+								<button class="secondary-bg">View Code</button>
 							</a> 
 						</div>
 					</div>
 				</div>
-				<div class="work-box left">
+				<div class="work-box" data-aos="fade-right"
+				data-aos-duration="2000">
 					<div class="img">
 						<img src="./assets/images/websolution.PNG" alt="icon">
 						<img src="./assets/images/expand.svg" class="expand">
@@ -276,12 +339,13 @@
 								<button class="primary-bg">Demo</button>
 							</a>					
 							<a href="https://github.com/pengpa0012/web-solution-landing-page" target="_blank">
-								<button>View Code</button>
+								<button class="secondary-bg">View Code</button>
 							</a> 
 						</div>
 					</div>
 				</div>
-				<div class="work-box right">
+				<div class="work-box" data-aos="fade-left"
+				data-aos-duration="2000">
 					<div class="img">
 						<img src="./assets/images/airlines.PNG" alt="icon" class="project-img">
 						<img src="./assets/images/expand.svg" class="expand">
@@ -307,7 +371,7 @@
 								<button class="primary-bg">Demo</button>
 							</a>					
 							<a href="https://github.com/pengpa0012/airline-landing-page" target="_blank">
-								<button>View Code</button>
+								<button class="secondary-bg">View Code</button>
 							</a> 
 						</div>
 					</div>
@@ -322,10 +386,12 @@
 		</div>
 	</section>
 	<section class="contact" id="Contact">
-		<div class="wrapper">
-			<h2>Contact me</h2>
+		<div class="wrapper overflow-x-hidden">
+			<h2 data-aos="fade-up"
+			data-aos-duration="2000">Contact me</h2>
 			<div class="flex">
-				<div class="contact-list">
+				<div class="contact-list" data-aos="fade-right"
+				data-aos-duration="2000">
 					<ul>
 						<li>
 							<img src="./assets/images/envelope.svg">
@@ -337,10 +403,20 @@
 						</li>
 					</ul>
 				</div>
-				<form>
-					<input type="text" placeholder="Name*">
-					<input type="email" placeholder="Email*">
-					<textarea placeholder="Message*"></textarea>
+				<form data-aos="fade-left"
+				data-aos-duration="2000">
+					<div class="input">
+						<label data-label>Name*</label>
+						<input type="text" data-input>
+					</div>
+					<div class="input">
+						<label data-label>Email*</label>
+						<input type="text" data-input>
+					</div>
+					<div class="input">
+						<label data-label>Message*</label>
+						<textarea data-input></textarea>
+					</div>
 					<input type="submit" value="Send" class="primary-bg">
 				</form>			
 			</div>
@@ -349,9 +425,16 @@
 	<footer>
 		<div class="wrapper">
 			<h5>Made by Godrey Necesario</h5>
-			<p>This website was made using pure HTML, CSS and JAVASCRIPT.</p>
+			<div class="social-icons">
+				<img src="./assets/images/linkedin.svg" alt="icon">
+				<img src="./assets/images/instagram.svg" alt="icon">
+			</div>
 		</div>
 	</footer>
 	<div class="overlay"></div>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
 </body>
 </html>
