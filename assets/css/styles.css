@@ -85,8 +85,8 @@ h1{
 	font-weight: 300;
 }
 
-h2,h3,h4{
-	font-weight: 400;
+h2,h3,h4,h5{
+	font-weight: 400 !important;
 }
 
 h2{
@@ -551,6 +551,7 @@ header nav ul a:hover{
 	border: solid 1px var(--gray-color);
 	border-radius: 5px;
 	margin-bottom: 15px;
+	outline: none;
 }
 
 .contact .wrapper .flex form textarea{
@@ -706,8 +707,8 @@ footer .wrapper .social-icons img:hover{
 		margin-bottom: 2rem;
 	}
 
-	p{
-		font-size: .8rem;
+	h5{
+		font-size: .9rem !important;
 	}
 
 	button{
@@ -717,6 +718,10 @@ footer .wrapper .social-icons img:hover{
 
 	section, footer{
 		padding: 1rem 15px;
+	}
+
+	.banner .wrapper .banner-text{
+		text-align: center;
 	}
 
 	.about .wrapper .lower .image{

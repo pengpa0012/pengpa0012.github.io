@@ -59,7 +59,6 @@ function floatLabel(label){
 			if(e.target.value != "") return		
 			e.target.offsetParent.children[0].classList.remove('active')	
 			el.classList.remove('active')
-			console.log(e.target.offsetParent.children[0])
 		})
 	})
 }
