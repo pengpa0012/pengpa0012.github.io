@@ -18,6 +18,63 @@ body{
 
 /* Global */
 
+.html-bg,
+.css-bg,
+.js-bg,
+.vue-bg,
+.bootstrap-bg,
+.tailwind-bg,
+.api-bg,
+.nuxt-bg,
+.regular-bg{
+	color: #fff;
+	padding: 2px 5px;
+	border-radius: 2px;
+	font-size: .9rem;
+	margin-bottom: 3px;
+	display: inline-block;
+}	
+
+.html-bg{
+	
+	background: #f16529;
+}
+
+.css-bg{
+	background: #33a9dc;
+}
+
+.js-bg{
+	color: #000;
+	background: #f0db4f;
+}
+
+.vue-bg{
+	background: #41b883;
+}
+
+.bootstrap-bg{
+	background: #5b4282;
+}
+
+.tailwind-bg{
+	background: #15b7c4;
+}
+
+.api-bg{
+	background: #111b23;
+}
+
+.nuxt-bg{
+	background: #2e475b;
+}
+
+.regular-bg{
+	background: #fff;
+	color: var(--gray-color);
+	border: solid 1px var(--gray-color);
+}
+
 .overflow-x-hidden{
 	overflow-x: hidden;
 }
@@ -443,6 +500,9 @@ header nav ul a:hover{
 
 .works .wrapper .work-grid .work-box .info{
 	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .works .wrapper .work-grid .work-box .info .name{
@@ -472,12 +532,6 @@ header nav ul a:hover{
 	margin-right: 5px;
 }
 
-.works .wrapper .work-grid .work-box .info .language span{	
-	color: var(--primary-color);
-	font-size: .9rem;
-	text-decoration: underline;
-}
-
 .works .wrapper .work-grid .work-box .buttons button{
 	padding: 5px 10px;
 	font-size: .9rem;
@@ -485,6 +539,7 @@ header nav ul a:hover{
 
 .works .wrapper .load-btn{
 	text-align: center;
+	pointer-events: none;
 }
 
 /* Contact */

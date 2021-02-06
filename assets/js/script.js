@@ -127,3 +127,27 @@ window.addEventListener('load', ()=>{
 	subHeading.classList.add('fade')
 	bannerImg.classList.add('fade')
 })
+
+
+// load more function
+
+const allLoad = document.querySelectorAll('.load-more')
+const loadBtn = document.querySelector('.load-btn button')
+
+allLoad.forEach(el => {
+	el.style.display = 'none'
+})
+
+let maxResult = 2
+
+loadBtn.addEventListener('click', () => {
+
+	if(maxResult == 4) loadBtn.style.display = 'none' 
+
+	for(i = 0; i < maxResult; i++){
+		allLoad[i].style.display = 'flex'
+	}
+
+	maxResult += 2
+	console.log(maxResult)
+})
