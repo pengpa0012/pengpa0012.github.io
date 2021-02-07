@@ -587,9 +587,9 @@ header nav ul a:hover{
 }
 
 .contact .wrapper .flex form .input label.active{
-	transform: translateY(-105%);
+	transform: translateY(-105%) scale(.8);
+	transform-origin: 0;
 	color: var(--primary-color);
-	font-size: .8rem;
 	background: #fff;
 }
 
