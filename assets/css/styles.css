@@ -645,6 +645,10 @@ footer .wrapper .social-icons{
 	margin: 1rem 0;
 }
 
+footer .wrapper .social-icons a{
+	outline: none;
+}
+
 footer .wrapper .social-icons img{
 	margin: 0 10px;
 	cursor: pointer;
