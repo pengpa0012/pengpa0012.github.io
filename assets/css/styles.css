@@ -796,8 +796,20 @@ footer .wrapper .social-icons img:hover{
 		width: 100%;
 	}
 
+	.tools .wrapper .tools-grid{
+		padding: 2rem 0;
+	}
+
+	.tools .wrapper .tools-grid .box{
+		margin: 0;
+	}
+	
+	.tools .wrapper .tools-grid .box h4{
+		text-align: center;
+	}
+
 	.works .wrapper .work-grid{
-		margin: 0 0rem 5rem 0rem;
+		margin: 0 0 5rem 0;
 		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 	}
 
