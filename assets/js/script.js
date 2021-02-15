@@ -1,4 +1,21 @@
-/* Nav Toggle */
+// Header scroll box shadow
+const header = document.querySelector('header')
+
+function changeClassOnScroll(){
+	const banner = document.querySelector('.banner')
+	const bannerTop = banner.getBoundingClientRect().y
+
+	if(bannerTop < 0){
+		header.classList.add('active')
+	}else{
+		header.classList.remove('active')
+	}
+
+	console.log(bannerTop)
+}
+window.addEventListener('scroll', changeClassOnScroll)
+
+// Nav Toggle 
 
 const navList = document.querySelector('.nav-list')
 const navLinks = document.querySelectorAll('.nav-list a')
