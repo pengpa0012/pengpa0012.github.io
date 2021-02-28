@@ -11,7 +11,6 @@ function changeClassOnScroll(){
 		header.classList.remove('active')
 	}
 
-	console.log(bannerTop)
 }
 window.addEventListener('scroll', changeClassOnScroll)
 
@@ -123,7 +122,10 @@ let timer = setInterval(onTick, 50)
 function onTick(){
 	const span = heading.querySelectorAll('span')[charIndex]
 
-	span.classList.add('fade')
+	setTimeout(() => {
+		span.classList.add('fade')
+	}, 2000)
+	
 	charIndex++
 	if(charIndex === heading.children.length){
 		completed()
@@ -139,10 +141,15 @@ function completed(){
 // Banner Animation
 
 window.addEventListener('load', ()=>{
+
 	const subHeading = document.querySelector('.sub-heading')
 	const bannerImg = document.querySelector('.banner-img')
-	subHeading.classList.add('fade')
-	bannerImg.classList.add('fade')
+
+	setTimeout(() => {
+		subHeading.classList.add('fade')
+		bannerImg.classList.add('fade')
+	}, 2000)
+	
 })
 
 
