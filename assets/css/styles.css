@@ -556,7 +556,7 @@ header nav ul a:hover{
 
 .works .wrapper .load-btn{
 	text-align: center;
-	pointer-events: none;
+	/* pointer-events: none; */
 }
 
 /* Contact */
