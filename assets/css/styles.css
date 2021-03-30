@@ -427,6 +427,7 @@ header nav ul a:hover {
 
 .tools .wrapper .tools-grid .box .tools .icon:hover span {
   display: block;
+  text-align: center;
 }
 
 .tools .wrapper .tools-grid .box .tools .icon img {
@@ -856,12 +857,16 @@ footer .wrapper .social-icons img:hover {
   }
 
   .works .wrapper .work-grid .work-box .img {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     margin-right: 0;
   }
 
   .works .wrapper .project-display {
     width: 95%;
+  }
+
+  .works .wrapper .load-btn {
+    margin-bottom: 2rem;
   }
 
   footer {
