@@ -12,6 +12,7 @@ const spriteWidth = 32
 const spriteHeight = 32
 
 let stopFrame = false
+let progressBar = 0
 
 const image = new Image()
 image.src = "./assets/images/1 Pink_Monster/Pink_Monster_Run_6.png"
@@ -33,15 +34,15 @@ backgroundLayer5.src = "./assets/images/parallax-mountain-foreground-trees.png"
 
 // let progressWidth = 0;
 
-window.addEventListener("keydown", () => { 
+// window.addEventListener("keydown", () => { 
   // if(progressWidth >= 500) {
   //   image.src = "./assets/images/Idle.png"
   //   return
   // }
   // let loadSpeed = Math.floor(Math.random() * 10)
   // progressWidth += loadSpeed
-  stopFrame = !stopFrame
-})
+  // stopFrame = !stopFrame
+// })
 
 let gameFrame = 0
 let staggerFrames = 5
@@ -55,7 +56,6 @@ class Layer {
     this.y = 0
     this.width = 544
     this.height = 160
-    // this.x2 = this.width
     this.image = image
     this.speedModifier = speedModifier
     this.speed = gameSpeed * this.speedModifier
@@ -87,11 +87,13 @@ function animate(){
   ctx.clearRect(0,0,CANVAS_WIDTH,CANVAS_HEIGHT)
   let position = Math.floor(gameFrame / staggerFrames) % spriteLength
   let frameX = spriteWidth * position
-  // ctx.fillStyle = 'red';
-  // ctx.fillRect(0, 500 - 18, progressWidth, 18);
+
   gameFrame++
-  if(stopFrame) gameFrame = 0
-  // ctx.drawImage(layer1, 0, 0, 272, 160)
+  if(progressBar >= CANVAS_WIDTH) {
+    stopFrame = true
+    gameFrame = 0
+  } else progressBar++
+
   backgroundObjects.forEach(obj => {
     if(stopFrame) {
       obj.draw()
@@ -100,7 +102,11 @@ function animate(){
     obj.update()
     obj.draw()
   })
+
   ctx.drawImage(image,frameX,0,spriteWidth,spriteHeight,(CANVAS_WIDTH / 2) - spriteWidth,CANVAS_HEIGHT - spriteHeight, spriteWidth, spriteHeight)
+  ctx.fillText(`Loading ${Math.floor(progressBar / CANVAS_WIDTH * 100)} %`, CANVAS_WIDTH / 2 - spriteWidth, 50);
+  ctx.fillStyle = "yellow"
+  ctx.fillRect(0,0,progressBar,5)
   requestAnimationFrame(animate)
 }
 
@@ -108,9 +114,6 @@ animate()
 
 /*
 TODO
--Functionality
--Learn how to switch between different sprite file (done)
-  -learn to do it efficiently
--Learn how to add text and font family
--Add other effects
+- Add border style
+- Animated loader text
 */
