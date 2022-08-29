@@ -8,7 +8,6 @@ body {
   min-height: 100vh;
   display: grid;
   place-items: center;
-  background: #12213a;
 }
 
 .container{
@@ -19,5 +18,31 @@ body {
 #canvas {
   width: 500px;
   height: 300px;
-  border-radius: 2px;
+}
+
+
+.container {
+  display: none;
+}
+
+.overlay {
+  background: red;
+  position: fixed;
+  inset: 0;
+  transform: translateX(-100%);
+  transition: 500ms ease-in;
+}
+
+.overlay.active {
+  animation: fade 1500ms ease forwards;
+}
+
+@keyframes fade {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
 }
