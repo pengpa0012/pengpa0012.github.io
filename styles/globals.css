@@ -1,10 +1,100 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap');
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  cursor: none !important;
+}
+
+body {
+  font-family: 'Assistant', sans-serif;
+  --primary-color: #8d32e3;
+  --primary-color-hover: #7428bc;
+  overflow: hidden;
+}
+
+.text-black {
+  color: #545454 !important;
 }
 
 .container {
-  max-width: 1440px;
+  max-width: 1700px;
   margin: 0 auto;
+}
+
+.nav-bar li:hover,
+.nav-bar h1:hover {
+  color: #fff;
+}
+
+button {
+  background: var(--primary-color) !important;
+  color: #fff !important;
+}
+
+button:hover {
+  background: var(--primary-color-hover) !important;
+}
+
+.list-icons li svg {
+  width: 30px;
+  height: 30px;
+}
+
+.list-icons li svg:hover,
+.list-icons li:nth-child(1) svg:hover path {
+  fill: #fff;
+}
+
+.cursor {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: all 300ms ease;
+  transition-property: background, transform, border;
+  transform-origin: 100% 100%;
+  background: #8d32e3;
+  mix-blend-mode: plus-lighter;
+  z-index: 2;
+}
+
+.cursor.hover {
+  transform: scale(2);
+}
+
+.vec-1,
+.vec-2 {
+  position: absolute;
+  bottom: 0;
+  width: 35%;
+  mix-blend-mode: plus-lighter;
+}
+
+.vec-2 {
+  right: 0;
+}
+
+.vec-1 path {
+  transition: 0.2s;
+  animation: moveOne 8s ease-in-out infinite alternate;
+}
+
+.vec-2 path {
+  transition: 0.2s;
+  animation: moveTwo 8s ease-in-out infinite alternate;
+}
+
+@keyframes moveOne {
+  to {
+    d: path("M200.5 100C135.346 9.33362 65.0114 -12.727 -16.4886 7.27299C-34.3219 163.94 -75.7886 488.173 -74.9886 499.773C-73.9886 514.273 32.5114 523.273 48.5114 530.773C64.5114 538.273 267.012 530.773 282.512 530.773C298.012 530.773 750.011 534.273 769.511 508.773C789.011 483.273 760 469.5 662.5 379.5C565 289.5 535 292.5 384.5 265.5C234 238.5 283.5 215.5 200.5 100Z");
+  }
+}
+
+@keyframes moveTwo {
+  to {
+    d: path("M688 42C753.154 -48.6664 851 34.9999 932.5 54.9999C950.333 211.667 903.392 527.173 902.592 538.773C901.592 553.273 795.092 562.273 779.092 569.773C763.092 577.273 560.592 569.773 545.092 569.773C529.592 569.773 23.5 605.5 4 580C-15.5 554.5 57.2413 423.672 189.5 413C335.407 401.227 286.5 243 451 243C615.5 243 605 157.5 688 42Z");
+  }
 }
