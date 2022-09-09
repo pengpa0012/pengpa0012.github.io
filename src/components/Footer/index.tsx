@@ -1,29 +1,6 @@
 import React, { useEffect } from 'react'
 
 function Footer() {
-  useEffect(() => {
-    const cursor = document.querySelector<HTMLElement>(".cursor")!
-    const navLinks = document.querySelectorAll(".nav-link, .cursor-hover")
-
-    document.addEventListener("mousemove", (e) => {
-      let mousex = e.clientX
-      let mousey = e.clientY
-
-      cursor.style.top = `${mousey}px`
-      cursor.style.left = `${mousex}px`
-    })
-
-    navLinks.forEach(link => {
-      link.addEventListener("mouseenter", () => {
-        cursor.classList.add("hover")
-      })
-
-      link.addEventListener("mouseleave", () => {
-        cursor.classList.remove("hover")
-      })
-    })
-
-  }, [])
   
   return (
     <>
