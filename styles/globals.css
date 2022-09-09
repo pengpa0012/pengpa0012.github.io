@@ -10,7 +10,6 @@ body {
   font-family: 'Assistant', sans-serif;
   --primary-color: #8d32e3;
   --primary-color-hover: #7428bc;
-  overflow: hidden;
 }
 
 .text-black {
@@ -47,7 +46,7 @@ button:hover {
 }
 
 .cursor {
-  position: absolute;
+  position: fixed;
   transform: translate(-50%, -50%);
   pointer-events: none;
   width: 50px;
