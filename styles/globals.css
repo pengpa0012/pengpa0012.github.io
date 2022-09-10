@@ -12,13 +12,17 @@ body {
   --primary-color-hover: #7428bc;
 }
 
-.text-black {
+.text-black-custom {
   color: #545454 !important;
 }
 
 .container {
   max-width: 1700px;
   margin: 0 auto;
+}
+
+.nav-bar {
+  margin-bottom: -80px;
 }
 
 .nav-bar li:hover,
@@ -57,19 +61,24 @@ button:hover {
   transform-origin: 100% 100%;
   background: #8d32e3;
   mix-blend-mode: plus-lighter;
-  z-index: 2;
+  z-index: 20;
 }
 
 .cursor.hover {
   transform: scale(2);
 }
 
+.cursor.remove-blend {
+  mix-blend-mode: normal;
+}
+
 .vec-1,
 .vec-2 {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 35%;
   mix-blend-mode: plus-lighter;
+  pointer-events: none;
 }
 
 .vec-2 {

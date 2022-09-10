@@ -10,6 +10,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     const cursor = document.querySelector<HTMLElement>(".cursor")!
     const navLinks = document.querySelectorAll(".nav-link, .cursor-hover")
+    const workCard = document.querySelectorAll(".work-card")
 
     document.addEventListener("mousemove", (e) => {
       let mousex = e.clientX
@@ -26,6 +27,17 @@ function MyApp({ Component, pageProps }: AppProps) {
 
       link.addEventListener("mouseleave", () => {
         cursor.classList.remove("hover")
+      })
+    })
+
+    workCard.forEach(card => {
+      card.addEventListener("mouseenter", () => {
+        console.log("Yrdy")
+        cursor.classList.add("remove-blend")
+      })
+
+      card.addEventListener("mouseleave", () => {
+        cursor.classList.remove("remove-blend")
       })
     })
 
