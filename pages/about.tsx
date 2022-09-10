@@ -1,6 +1,6 @@
 import React from 'react'
 
-const about = () => {
+const About = () => {
   return (
     <div className="container py-40 text-black-custom">
       <div className="flex justify-between items-center">
@@ -11,4 +11,4 @@ const about = () => {
   )
 }
 
-export default about
+export default About
