@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Navbar() {
+function WorkCard() {
   return (
     <div className="shadow-md bg-white max-w-2xl text-black-custom rounded-lg work-card flex flex-col sm:flex-row overflow-hidden">
       <img src="https://via.placeholder.com/268" className="max-w-lg" draggable="false" />
@@ -26,4 +26,4 @@ function Navbar() {
   )
 }
 
-export default Navbar
+export default WorkCard
