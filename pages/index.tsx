@@ -19,7 +19,7 @@ const Home: NextPage = () => {
         <div className="p-6 text-center">
           <h1 className="text-6xl font-extralight">HI! I'M <br /> GODFREY PATRICIO</h1>
           <p className="text-xl mt-4 mb-6 font-semibold">FRONT END DEVELOPER</p>
-          <button className="border rounded-md py-4 px-8 font-medium" onClick={() => router.push("/works")}>See my works</button>
+          <button className="rounded-md py-4 px-8 font-medium btn-primary" onClick={() => router.push("/works")}>See my works</button>
         </div>
         <div className="absolute bottom-0 left-1/2 transform -translate-x-2/4 p-6 text-center">
           <p className="text-2xl mb-2">

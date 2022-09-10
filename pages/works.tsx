@@ -1,9 +1,27 @@
-import React from 'react'
+import React, { ClassicComponentClass, useEffect } from 'react'
 import WorkCard from '../src/components/WorkCard'
 
-const works = () => {
+const Works = () => {
+
+  useEffect(() => {
+    const cursor = document.querySelector<HTMLElement>(".cursor")!
+    const workCard = document.querySelectorAll(".work-card")
+    hover(workCard, cursor, "card")
+  }, [])
+
+  const hover = (arrayClass: NodeListOf<Element>, targetClass: Element, type: string) => {
+    arrayClass.forEach(card => {
+      card.addEventListener("mouseenter", () => {
+        targetClass.classList[type == "card" ? "add" : "remove"]("change-blend")
+      })
+      card.addEventListener("mouseleave", () => {
+        targetClass.classList[type == "card" ? "remove" : "add"]("change-blend")
+      })
+    })
+  }
+  
   return (
-    <div className="container py-40 text-black">
+    <div className="container py-40 text-black-custom">
       <div className="flex justify-between items-center">
         <h1 className="text-3xl">LIST OF MY WORKS</h1>
         <div className="flex">
@@ -25,10 +43,9 @@ const works = () => {
         <WorkCard />
         <WorkCard />
         <WorkCard />
-        <WorkCard />
       </div>
     </div>
   )
 }
 
-export default works
+export default Works
