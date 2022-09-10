@@ -2,7 +2,7 @@ import React from 'react'
 
 function Navbar() {
   return (
-    <div className="shadow-md bg-white max-w-xl text-black-custom rounded-lg work-card flex flex-col sm:flex-row overflow-hidden">
+    <div className="shadow-md bg-white max-w-2xl text-black-custom rounded-lg work-card flex flex-col sm:flex-row overflow-hidden">
       <img src="https://via.placeholder.com/268" className="max-w-lg" draggable="false" />
       <div className="p-6 flex flex-col justify-between">
         <div>
