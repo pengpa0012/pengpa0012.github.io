@@ -15,7 +15,7 @@ const Home: NextPage = () => {
         <meta name="description" content="My porfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="container min-h-screen flex justify-center items-center text-black">
+      <main className="container min-h-screen flex justify-center items-center text-black-custom">
         <div className="p-6 text-center">
           <h1 className="text-6xl font-extralight">HI! I'M <br /> GODFREY PATRICIO</h1>
           <p className="text-xl mt-4 mb-6 font-semibold">FRONT END DEVELOPER</p>
