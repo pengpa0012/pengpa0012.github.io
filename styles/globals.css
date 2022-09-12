@@ -49,13 +49,25 @@ body {
   color: #fff;
 }
 
+.list-icons li {
+  padding: 0.5rem;
+}
+
+.list-icons li.active{
+  background: var(--primary-color);
+  border-radius: 50%;
+}
+
+.list-icons li.active .fill {
+  fill: #fff;
+}
+
 .list-icons li svg {
   width: 30px;
   height: 30px;
 }
 
-.list-icons li svg:hover,
-.list-icons li:nth-child(1) svg:hover path {
+.list-icons li:hover .fill {
   fill: #fff;
 }
 
@@ -89,6 +101,11 @@ body {
   width: 35%;
   mix-blend-mode: lighten;
   pointer-events: none;
+}
+
+.vec-1.about,
+.vec-2.about {
+  mix-blend-mode: plus-lighter;
 }
 
 .vec-2 {
