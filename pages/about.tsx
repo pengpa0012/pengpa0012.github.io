@@ -2,7 +2,7 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div className="container py-40 text-black-custom">
+    <div className="container py-20 md:py-40 text-black-custom">
       <div className="flex justify-between">
         <div className="w-1/2">
           <div className="mb-6">

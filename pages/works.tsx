@@ -3,7 +3,7 @@ import WorkCard from '../src/components/WorkCard'
 import { workDetails } from "../src/contents/workContents"
 
 const Works = () => {
-  const [tab, setTab] = useState(0)
+  const [tab, setTab] = useState<number>(0)
 
   useEffect(() => {
     const cursor = document.querySelector<HTMLElement>(".cursor")!
@@ -21,7 +21,7 @@ const Works = () => {
   }, [tab])
   
   return (
-    <div className="container py-40 text-black-custom">
+    <div className="container py-20 md:py-40 text-black-custom">
       <div className="flex justify-between items-center">
         <h1 className="text-3xl">LIST OF MY WORKS</h1>
         <div className="flex items-center">
