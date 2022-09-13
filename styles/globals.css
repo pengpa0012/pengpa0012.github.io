@@ -16,6 +16,10 @@ body {
   color: #545454 !important;
 }
 
+.bg-primary {
+  background: var(--primary-color);
+}
+
 .container {
   max-width: 1700px;
   margin: 0 auto;
