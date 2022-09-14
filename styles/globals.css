@@ -149,4 +149,44 @@ body {
   .vec-2  {
     display: none;
   }
+
+  .nav-bar-mobile {
+    box-shadow: 0 -4px 6px -1px rgb(0 0 0 / 0.1) , 0 -2px 4px -2px rgb(0 0 0 / 0.1) !important;
+    max-height: 80px;
+  }
+
+  .nav-bar-mobile .nav-bar-mobile-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-bar-mobile .nav-bar-mobile-list .icon {
+    padding: .8rem;
+    border-radius: 50%;
+    transform: translateY(-25%);
+    transition: 200ms ease;
+  }
+
+  .nav-bar-mobile .nav-bar-mobile-list.active .icon  {
+    transform: translateY(-90%);
+    background: var(--primary-color);
+  }
+
+  .nav-bar-mobile .nav-bar-mobile-list.active .icon svg path {
+    fill: #fff;
+  }
+
+  .nav-bar-mobile .nav-bar-mobile-list h2 {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    transform: translateY(0%);
+    transition: 200ms ease;
+  }
+
+  .nav-bar-mobile .nav-bar-mobile-list.active h2 {
+    transform: translateY(-150%);
+  }
+
 }

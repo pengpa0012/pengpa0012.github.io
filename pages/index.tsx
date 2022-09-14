@@ -21,7 +21,7 @@ const Home: NextPage = () => {
           <p className="text-xl mt-4 mb-6 font-semibold">FRONT END DEVELOPER</p>
           <button className="rounded-md py-4 px-8 font-medium btn-primary" onClick={() => router.push("/works")}>See my works</button>
         </div>
-        <div className="absolute bottom-0 left-1/2 transform -translate-x-2/4 p-6 text-center">
+        <div className="hidden md:block absolute bottom-0 left-1/2 transform -translate-x-2/4 p-6 text-center">
           <p className="text-2xl mb-2">
             Reach me on
           </p>
