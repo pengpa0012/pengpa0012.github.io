@@ -22,10 +22,10 @@ const Works = () => {
   
   return (
     <div className="container py-20 md:py-40 text-black-custom">
-      <div className="flex justify-between items-center">
-        <h1 className="text-3xl">LIST OF MY WORKS</h1>
+      <div className="flex justify-between items-center flex-col sm:flex-row">
+        <h1 className="text-2xl sm:text-3xl mb-6 sm:mb-0">LIST OF MY WORKS</h1>
         <div className="flex items-center">
-          <p className="mr-4">View by</p>
+          <p className="mr-4">View by:</p>
           <ul className="flex items-center list-icons">
             <li className={`mr-2 ${tab == 0 ? "active" : ""}`} onClick={() => setTab(0)}>
               <svg viewBox="0 0 32 32" height="32" width="32" style={{ fill: "none" }}><g data-name="Layer 2" id="Layer_2"><path fill="#8d32e3" className="fill" d="M26,26H6a3,3,0,0,1-3-3V9A3,3,0,0,1,6,6H26a3,3,0,0,1,3,3V23A3,3,0,0,1,26,26ZM6,8A1,1,0,0,0,5,9V23a1,1,0,0,0,1,1H26a1,1,0,0,0,1-1V9a1,1,0,0,0-1-1Z"/><path fill="#8d32e3" className="fill" d="M14,22H8a1,1,0,0,1,0-2h6a1,1,0,0,1,0,2Z"/><path fill="#8d32e3" className="fill" d="M28,13H4a1,1,0,0,1,0-2H28a1,1,0,0,1,0,2Z"/></g><g id="frame"><rect className="cls-1" height="32" width="32"/></g></svg>
@@ -36,7 +36,7 @@ const Works = () => {
           </ul>
         </div>
       </div>
-      <div className={`flex flex-wrap justify-center my-12 gap-4 ${tab == 0 ? "sm:gap-24" : "sm:gap-4"} px-4`}>
+      <div className={`flex flex-wrap justify-center my-12 pb-12 gap-4 ${tab == 0 ? "sm:gap-24" : "sm:gap-4"} px-4`}>
         {
           workDetails.map((work, i) => (
             <WorkCard details={work} card={tab == 0 ? true : false} key={`card-${i}`} />

@@ -178,7 +178,7 @@ body {
   }
 
   .nav-bar-mobile .nav-bar-mobile-list h2 {
-    font-size: 1rem;
+    font-size: .8rem;
     font-weight: bold;
     color: var(--primary-color);
     transform: translateY(0%);

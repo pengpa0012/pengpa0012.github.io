@@ -17,9 +17,9 @@ const Home: NextPage = () => {
       </Head>
       <main className="container min-h-screen flex justify-center items-center text-black-custom">
         <div className="p-6 text-center">
-          <h1 className="text-6xl font-extralight">HI! I&apos;M <br /> GODFREY PATRICIO</h1>
-          <p className="text-xl mt-4 mb-6 font-semibold">FRONT END DEVELOPER</p>
-          <button className="rounded-md py-4 px-8 font-medium btn-primary" onClick={() => router.push("/works")}>See my works</button>
+          <h1 className="text-3xl sm:text-6xl font-extralight">HI! I&apos;M <br /> GODFREY PATRICIO</h1>
+          <p className="text-md sm:text-xl mt-2 sm:mt-4 mb-3 sm:mb-6 font-semibold">FRONT END DEVELOPER</p>
+          <button className="rounded-md py-2 sm:py-4 px-6 sm:px-8 font-medium btn-primary" onClick={() => router.push("/works")}>See my works</button>
         </div>
         <div className="hidden md:block absolute bottom-0 left-1/2 transform -translate-x-2/4 p-6 text-center">
           <p className="text-2xl mb-2">

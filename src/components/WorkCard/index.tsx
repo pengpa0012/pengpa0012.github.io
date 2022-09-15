@@ -18,7 +18,7 @@ function WorkCard({details, card}: Card) {
       <div>
         {card ? <h1 className="text-xl">{details.title}</h1> : undefined}
         <div className={`flex ${card ? "flex-col" : "flex-col-reverse"}`}>
-          <p className="text-md leading-snug">{details.description}</p>
+          <p className="text-sm sm:text-md leading-snug">{details.description}</p>
           <div className="mt-1 flex">
             <span className="text-sm mr-2">TAGS:</span>
             <ul className="flex text-sm">
@@ -32,8 +32,8 @@ function WorkCard({details, card}: Card) {
         </div>
       </div>
       <div className="flex mt-4">
-        <button className="py-2 px-6 rounded-md mr-2 btn-primary">DEMO</button>
-        <button className="py-2 px-6 rounded-md btn-primary-secondary">VIEW CODE</button>
+        <button className="py-1 sm:py-2 px-4 sm:px-6 rounded-md mr-2 btn-primary">DEMO</button>
+        <button className="py-1 sm:py-2 px-4 sm:px-6 rounded-md btn-primary-secondary">VIEW CODE</button>
       </div>
     </div>
   )
@@ -43,7 +43,7 @@ function WorkCard({details, card}: Card) {
       {
         card ? 
         <div className="shadow-md bg-white max-w-2xl text-black-custom rounded-lg work-card flex flex-col sm:flex-row overflow-hidden">
-          <img src={details.image} className="max-w-lg select-none" draggable="false" style={{ maxHeight: 400 }} />
+          <img src={details.image} className="max-w-lg select-none" draggable="false" style={{ maxHeight: 368 }} />
           {workContent(true)}
         </div>
       : 
@@ -55,7 +55,7 @@ function WorkCard({details, card}: Card) {
           </svg>
         </div>
         <div className={`${toggle ? "block" : "hidden"}`}>
-          <img src="https://via.placeholder.com/1080x400" className="w-full object-cover select-none" draggable="false" style={{ minHeight: 400 }} />
+          <img src="https://via.placeholder.com/1080x400" className="w-full object-cover select-none" draggable="false" style={{ minHeight: 368 }} />
           {workContent(false)}
         </div>
       </div>
