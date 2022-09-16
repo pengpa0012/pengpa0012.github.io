@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     setTimeout(() => {
       setIsLoading(false)
     }, 1500);
-    
+    if(isLoading) return
     const cursor = document.querySelector<HTMLElement>(".cursor")!
     const navLinks = document.querySelectorAll(".nav-link, .cursor-hover")
     document.addEventListener("mousemove", (e) => {
@@ -36,7 +36,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         cursor.classList.remove("hover")
       })
     })
-  }, [])
+  }, [isLoading])
 
   
   return (
@@ -44,9 +44,13 @@ function MyApp({ Component, pageProps }: AppProps) {
     <Head>
       <script src="https://cdn.tailwindcss.com" defer></script>
     </Head>
-    <Navbar />
-    { isLoading ? <Loader /> : <Component {...pageProps} /> }
-    <Footer />
+    { isLoading ? <Loader /> : 
+      <>
+        <Navbar />
+        <Component {...pageProps} />
+        <Footer />
+      </> 
+    }
   </>
   )
 }
