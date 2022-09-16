@@ -3,14 +3,22 @@ import type { AppProps } from 'next/app'
 import Navbar from '../src/components/Navbar'
 import Footer from '../src/components/Footer'
 import Head from 'next/head'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
+import Loader from '../src/components/Loader'
+import { useRouter } from 'next/router'
+
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const [isLoading, setIsLoading] = useState<boolean>(true)
+  const router = useRouter()
 
   useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false)
+    }, 1500);
+    
     const cursor = document.querySelector<HTMLElement>(".cursor")!
     const navLinks = document.querySelectorAll(".nav-link, .cursor-hover")
-
     document.addEventListener("mousemove", (e) => {
       let mousex = e.clientX
       let mousey = e.clientY
@@ -28,8 +36,8 @@ function MyApp({ Component, pageProps }: AppProps) {
         cursor.classList.remove("hover")
       })
     })
-
   }, [])
+
   
   return (
     <>
@@ -37,7 +45,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <script src="https://cdn.tailwindcss.com" defer></script>
     </Head>
     <Navbar />
-    <Component {...pageProps} />
+    { isLoading ? <Loader /> : <Component {...pageProps} /> }
     <Footer />
   </>
   )
