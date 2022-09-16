@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false)
-    }, 1500);
+    }, 2000);
     if(isLoading) return
     const cursor = document.querySelector<HTMLElement>(".cursor")!
     const navLinks = document.querySelectorAll(".nav-link, .cursor-hover")
