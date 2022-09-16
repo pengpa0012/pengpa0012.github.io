@@ -25,6 +25,21 @@ body {
   margin: 0 auto;
 }
 
+.swiper-slide {
+  width: 100% !important;
+  font-size: .5rem;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  color: #fff;
+  background:  var(--primary-color);
+  padding: 1rem;
+  border-radius: 50%;
+  line-height: .5 !important;
+  font-size: 1rem !important;
+}
+
 .nav-bar {
   margin-bottom: -80px;
 }
@@ -32,6 +47,11 @@ body {
 .nav-bar li:hover,
 .nav-bar h1:hover {
   color: #fff;
+}
+
+.nav-link.active {
+  color: var(--primary-color);
+  font-weight: bold;
 }
 
 .btn-primary {

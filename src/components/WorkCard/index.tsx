@@ -1,4 +1,14 @@
 import React, { useState } from 'react'
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+
+
+// import required modules
+import { Navigation } from "swiper";
 
 interface Card {
   card: boolean
@@ -38,12 +48,26 @@ function WorkCard({details, card}: Card) {
     </div>
   )
 
+  const workCarousel = (card: boolean) => (
+    <Swiper navigation={true} modules={[Navigation]} className="mySwiper" loop={true} slidesPerView={1}>
+      <SwiperSlide>
+        <img src={card ? "https://via.placeholder.com/200" : "https://via.placeholder.com/1080x400"} className={`w-full object-cover select-none`} draggable="false" style={card ? { maxHeight: 368 } : { minHeight: 368 }} />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src={card ? "https://via.placeholder.com/200" : "https://via.placeholder.com/1080x400"} className={`w-full object-cover select-none`} draggable="false" style={card ? { maxHeight: 368 } : { minHeight: 368 }} />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src={card ? "https://via.placeholder.com/200" : "https://via.placeholder.com/1080x400"} className={`w-full object-cover select-none`} draggable="false" style={card ? { maxHeight: 368 } : { minHeight: 368 }} />
+      </SwiperSlide>
+    </Swiper>
+  )
+
   return (
     <>
       {
         card ? 
         <div className="shadow-md bg-white max-w-2xl text-black-custom rounded-lg work-card flex flex-col sm:flex-row overflow-hidden">
-          <img src={details.image} className="max-w-lg select-none" draggable="false" style={{ maxHeight: 368 }} />
+          {workCarousel(true)}
           {workContent(true)}
         </div>
       : 
@@ -55,7 +79,7 @@ function WorkCard({details, card}: Card) {
           </svg>
         </div>
         <div className={`${toggle ? "block" : "hidden"}`}>
-          <img src="https://via.placeholder.com/1080x400" className="w-full object-cover select-none" draggable="false" style={{ minHeight: 368 }} />
+          {workCarousel(false)}
           {workContent(false)}
         </div>
       </div>
