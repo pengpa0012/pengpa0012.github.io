@@ -20,6 +20,10 @@ body {
   background: var(--primary-color);
 }
 
+.text-primary {
+  color: var(--primary-color);
+}
+
 .container {
   max-width: 1700px;
   margin: 0 auto;
