@@ -23,7 +23,7 @@ const Works = () => {
   return (
     <div className="container py-20 md:py-40 text-black-custom">
       <div className="flex justify-between items-center flex-col sm:flex-row">
-        <h1 className="text-2xl sm:text-3xl mb-6 sm:mb-0">LIST OF MY WORKS</h1>
+        <h1 className="text-2xl sm:text-3xl mb-6 sm:mb-0 font-bold text-primary">MY WORKS</h1>
         <div className="flex items-center">
           <p className="mr-4">View by:</p>
           <ul className="flex items-center list-icons">
