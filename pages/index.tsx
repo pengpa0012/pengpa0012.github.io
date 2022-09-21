@@ -35,7 +35,7 @@ const Home: NextPage = () => {
               </a>
             </li>
             <li className="mx-2">
-              <a href="https://linkedin.com/in/godfrey-patricio-513b6b203" target="_blank">
+              <a href="https://linkedin.com/in/godfrey-patricio-513b6b203" target="_blank" rel="noreferrer">
                 <svg width="40" height="40" viewBox="0 0 40 40">
                   <rect width="40" height="40" rx="20" fill="#8D32E3"/>
                   <path d="M14.6667 28.3333H10.6667V15H14.6667V28.3333ZM29.3333 28.3333H25.3333V21.2107C25.3333 19.3547 24.672 18.4307 23.3613 18.4307C22.3227 18.4307 21.664 18.948 21.3333 19.984C21.3333 21.6667 21.3333 28.3333 21.3333 28.3333H17.3333C17.3333 28.3333 17.3867 16.3333 17.3333 15H20.4907L20.7347 17.6667H20.8173C21.6373 16.3333 22.948 15.4293 24.7453 15.4293C26.112 15.4293 27.2173 15.8093 28.0613 16.764C28.9107 17.72 29.3333 19.0027 29.3333 20.804V28.3333Z" fill="white"/>
