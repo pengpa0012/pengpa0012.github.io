@@ -273,3 +273,27 @@ body {
     opacity: 0;
   }
 }
+
+#cogs path {
+  transform: rotate(0);
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: spin 20s linear infinite;
+}
+
+#cogs path:nth-child(2),
+#cogs path:nth-child(4) {
+  animation: spinReverse 20s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinReverse {
+  to {
+    transform: rotate(-360deg);
+  }
+}
