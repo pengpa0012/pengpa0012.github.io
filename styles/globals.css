@@ -286,6 +286,17 @@ body {
   animation: spinReverse 20s linear infinite;
 }
 
+#Vector,
+#Vector_2 {
+  animation: charBg 10000ms linear forwards infinite alternate;
+}
+
+@keyframes charBg {
+  to {
+    d: path("M305 359.5C305 359.5 409.142 276.5 423.5 175C427.5 73 423 26 368.5 13.5001C319 -11.5 241.19 2.8601 196 22.0001C150.81 41.1401 81.9399 34.71 38.9999 99C-3.94007 163.29 -21.2998 216.5 39.0001 317C136.5 479.5 251.5 428 305 359.5Z");
+  }
+}
+
 @keyframes spin {
   to {
     transform: rotate(360deg);
