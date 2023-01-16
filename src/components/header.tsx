@@ -6,9 +6,13 @@ export default component$(() => {
   const { pathname } = useLocation();
 
   return (
-    <header>
-      <nav class="text-center"> 
-        nav here
+    <header class="container flex justify-between py-6">
+      <h1 class="text-xl">LOGO</h1>
+      <nav> 
+        <ul class="flex">
+          <li class="text-xl cursor-pointer">Projects</li>
+          <li class="ml-4 text-xl cursor-pointer">About</li>
+        </ul>
       </nav>
     </header>
   );

@@ -3,10 +3,79 @@ import type { DocumentHead } from '@builder.io/qwik-city';
 
 export default component$(() => {
   return (
-    <h1 class="text-4xl text-red-900">Yello</h1>      
+    <div class="container">
+      <div class="flex justify-between items-center py-64">
+        <div class="py-12">
+          <h1 class="text-3xl">Heading here</h1>
+          <p class="text-xl mt-2 mb-4">Some title</p>
+          <div class="flex">
+            <button class="mr-4">My Projects</button>
+            <button>Something</button>
+          </div>
+        </div>
+        <h1 class="text-7xl">Illustration</h1>
+      </div>
+      <div class="py-36">
+        <div class="text-center mb-32">
+          <h2 class="text-3xl mb-12">ABOUT ME</h2>
+          <p class="text-xl max-w-4xl mx-auto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium quas assumenda mollitia iste numquam esse voluptas consectetur, necessitatibus delectus aliquam possimus non soluta dignissimos quaerat deserunt, ipsa quos error eum?</p>
+        </div>
+        <div class="text-center">
+          <h2 class="text-3xl mb-12">TECH STACK</h2>
+          <div class="flex flex-wrap gap-4 justify-center">
+            <h1>ICON</h1>
+            <h1>ICON</h1>
+            <h1>ICON</h1>
+            <h1>ICON</h1>
+            <h1>ICON</h1>
+            <h1>ICON</h1>
+            <h1>ICON</h1>
+            <h1>ICON</h1>
+          </div>
+        </div>
+      </div>
+      <div class="py-36">
+        <h2 class="text-3xl text-center mb-32">SOME OF MY WORKS</h2>
+        {
+          [1,2,3].map((item, i) => (
+            <div class="flex max-w-4xl mx-auto my-32">
+              <img src="https://via.placeholder.com/300x250" class="mr-20"/>
+              <div>
+                <h1 class="text-2xl">TITLE</h1>
+                <p class="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi maiores ratione illum animi dolore autem sapiente ullam distinctio laboriosam pariatur?</p>
+                <ul class="flex gap-4">
+                  <li>ICON</li>
+                  <li>ICON</li>
+                  <li>ICON</li>
+                  <li>ICON</li>
+                </ul>
+                <div class="flex mt-10">
+                  <button class="mr-4">DEMO</button>
+                  <button>VIEW CODE</button>
+                </div>
+              </div>
+            </div>
+          ))
+        }
+        <div class="text-center">
+          <button>View my Github</button>
+        </div>
+      </div>
+      <div class="py-36">
+        <div class="text-center mb-32">
+          <h2 class="text-3xl mb-12">REACH ME ON</h2>
+          <p class="text-xl max-w-4xl mx-auto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium quas assumenda mollitia iste numquam esse voluptas consectetur, necessitatibus delectus aliquam possimus non soluta dignissimos quaerat deserunt, ipsa quos error eum?</p>
+        </div>
+        <ul class="flex justify-center gap-4">
+          <li>ICON</li>
+          <li>ICON</li>
+          <li>ICON</li>
+        </ul>
+      </div>
+    </div>
   );
 });
-
+  
 export const head: DocumentHead = {
   title: "Homepage",
 };
