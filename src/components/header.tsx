@@ -12,6 +12,7 @@ export default component$(() => {
         <ul class="flex">
           <li class="text-xl cursor-pointer">Projects</li>
           <li class="ml-4 text-xl cursor-pointer">About</li>
+          <li class="ml-4 text-xl cursor-pointer">Toggle</li>
         </ul>
       </nav>
     </header>

@@ -7,3 +7,13 @@
   margin: 0 auto;
   padding-inline: 25px;
 }
+
+@layer components {
+  .btn-primary {
+    @apply bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md;
+  }
+
+  .btn-black {
+    @apply bg-gray-700 hover:bg-gray-800 text-white py-2 px-4 rounded-md;
+  }
+}

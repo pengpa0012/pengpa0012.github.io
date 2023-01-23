@@ -6,10 +6,10 @@ export default component$(() => {
     <div class="container">
       <div class="flex justify-between items-center py-64">
         <div class="py-12">
-          <h1 class="text-3xl">Heading here</h1>
-          <p class="text-xl mt-2 mb-4">Some title</p>
+          <h1 class="text-6xl font-light">Godfrey Patricio</h1>
+          <p class="text-xl mt-2 mb-4">Front end Developer</p>
           <div class="flex">
-            <button class="mr-4">My Projects</button>
+            <button class="mr-4 btn-primary">My Projects</button>
             <button>Something</button>
           </div>
         </div>
@@ -50,7 +50,7 @@ export default component$(() => {
                   <li>ICON</li>
                 </ul>
                 <div class="flex mt-10">
-                  <button class="mr-4">DEMO</button>
+                  <button class="mr-4 btn-primary">DEMO</button>
                   <button>VIEW CODE</button>
                 </div>
               </div>
@@ -58,7 +58,7 @@ export default component$(() => {
           ))
         }
         <div class="text-center">
-          <button>View my Github</button>
+          <button class="btn-black">View my Github</button>
         </div>
       </div>
       <div class="py-36">
@@ -77,5 +77,5 @@ export default component$(() => {
 });
   
 export const head: DocumentHead = {
-  title: "Homepage",
+  title: "Godfrey Patricio",
 };
