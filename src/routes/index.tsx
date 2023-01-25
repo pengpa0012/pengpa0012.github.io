@@ -38,7 +38,7 @@ export default component$(() => {
         <h2 class="text-3xl text-center mb-32">SOME OF MY WORKS</h2>
         {
           [1,2,3].map((item, i) => (
-            <div class="flex max-w-4xl mx-auto my-32">
+            <div class="flex max-w-4xl mx-auto my-32" key={`${item}-${i}`}>
               <img src="https://via.placeholder.com/300x250" class="mr-20"/>
               <div>
                 <h1 class="text-2xl">TITLE</h1>

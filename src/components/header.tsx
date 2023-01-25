@@ -1,5 +1,4 @@
-import { component$, useStore, useStyles$ } from '@builder.io/qwik';
-import { useLocation } from '@builder.io/qwik-city';
+import { component$ } from '@builder.io/qwik';
 
 interface headerProps {
   store: {
@@ -8,7 +7,6 @@ interface headerProps {
 }
 
 export default component$((props: headerProps) => {
-  const { pathname } = useLocation();
 
   return (
     <header class={`fixed inset-x-0 border border-t-0 border-r-0 border-l-0 duration-200 ${props.store.toggle ? "bg-gray-700" : "bg-white"}`}>
