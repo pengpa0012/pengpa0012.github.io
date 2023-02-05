@@ -9,7 +9,7 @@ interface headerProps {
 export default component$((props: headerProps) => {
 
   return (
-    <header class={`fixed inset-x-0 border border-t-0 border-r-0 border-l-0 duration-200 ${props.store.toggle ? "bg-gray-700" : "bg-white"}`}>
+    <header class={`fixed inset-x-0 shadow-md duration-200 ${props.store.toggle ? "bg-gray-700 text-white" : "bg-white text-black"}`}>
       <div class="container flex justify-between py-6">
         <h1 class="text-xl">LOGO</h1>
         <nav> 
