@@ -3,11 +3,11 @@ import type { DocumentHead } from '@builder.io/qwik-city';
 
 export default component$(() => {
   return (
-    <div class="container">
+    <div class="container pt-12">
       <div class="flex justify-between items-center py-64">
         <div class="py-12">
-          <h1 class="text-6xl font-light">Godfrey Patricio</h1>
-          <p class="text-xl mt-2 mb-4">Front end Developer</p>
+          <h1 class="text-7xl font-light">Godfrey Patricio</h1>
+          <p class="text-lg mt-2 mb-4">Front end Developer</p>
           <div class="flex">
             <button class="mr-4 btn-primary">My Projects</button>
             <button>Something</button>

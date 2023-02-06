@@ -17,7 +17,7 @@ export default component$((props: headerProps) => {
             <li class="text-xl cursor-pointer">Projects</li>
             <li class="ml-4 text-xl cursor-pointer">About</li>
             <li class="ml-4 text-xl cursor-pointer border rounded-full w-12 grid items-center px-1" onClick$={() => props.store.toggle = !props.store.toggle}>
-              <div class="bg-gray-500 w-4 h-4 rounded-full duration-200" style={{ transform: props.store.toggle ? "translateX(140%)" : "" }}></div>
+              <div class={`w-4 h-4 rounded-full duration-200 ${props.store.toggle ? "bg-white" : "bg-gray-500"}`} style={{ transform: props.store.toggle ? "translateX(140%)" : "" }}></div>
             </li>
           </ul>
         </nav>
@@ -25,5 +25,3 @@ export default component$((props: headerProps) => {
     </header>
   );
 });
-// Add toggler icon
-// Add darkmode classes
