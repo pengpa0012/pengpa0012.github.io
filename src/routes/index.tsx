@@ -34,10 +34,10 @@ export default component$(() => {
         </div>
         <div class="text-center">
           <h2 class="text-3xl mb-12">Things that i use</h2>
-          <div class="max-w-5xl mx-auto flex flex-wrap gap-12 justify-center">
+          <div class="max-w-4xl mx-auto flex flex-wrap gap-12 justify-center">
             {
               images.map((img, i) => (
-                <img key={`img-${i}`} src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${img}/${img}-original${img == "tailwindcss" ? "-wordmark" : ""}.svg`} class="w-24 grayscale hover:grayscale-0 duration-200" /> 
+                <img key={`img-${i}`} src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${img}/${img}-${img == "tailwindcss" ? "plain" : "original"}.svg`} class="w-24" title={img}/> 
               ))
             }
            
