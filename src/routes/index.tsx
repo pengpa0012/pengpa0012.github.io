@@ -2,6 +2,18 @@ import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
 
 export default component$(() => {
+  const images = [
+    "html5",
+    "css3",
+    "javascript",
+    "react",
+    "nextjs",
+    "express",
+    "mongodb",
+    "vuejs",
+    "nuxtjs",
+    "tailwindcss"
+  ]
   return (
     <div class="container pt-12">
       <div class="flex justify-between items-center py-64">
@@ -21,16 +33,14 @@ export default component$(() => {
           <p class="text-xl max-w-4xl mx-auto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium quas assumenda mollitia iste numquam esse voluptas consectetur, necessitatibus delectus aliquam possimus non soluta dignissimos quaerat deserunt, ipsa quos error eum?</p>
         </div>
         <div class="text-center">
-          <h2 class="text-3xl mb-12">TECH STACK</h2>
-          <div class="flex flex-wrap gap-4 justify-center">
-            <h1>ICON</h1>
-            <h1>ICON</h1>
-            <h1>ICON</h1>
-            <h1>ICON</h1>
-            <h1>ICON</h1>
-            <h1>ICON</h1>
-            <h1>ICON</h1>
-            <h1>ICON</h1>
+          <h2 class="text-3xl mb-12">Things that i use</h2>
+          <div class="max-w-5xl mx-auto flex flex-wrap gap-12 justify-center">
+            {
+              images.map((img, i) => (
+                <img key={`img-${i}`} src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${img}/${img}-original${img == "tailwindcss" ? "-wordmark" : ""}.svg`} class="w-24 grayscale hover:grayscale-0 duration-200" /> 
+              ))
+            }
+           
           </div>
         </div>
       </div>

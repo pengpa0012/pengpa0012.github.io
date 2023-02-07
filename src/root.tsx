@@ -16,6 +16,7 @@ export default component$(() => {
       <head>
         <meta charSet="utf-8" />
         <RouterHead />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"></link>
       </head>
       <body lang="en">
         <RouterOutlet />

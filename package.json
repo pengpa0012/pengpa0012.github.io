@@ -41,5 +41,9 @@
     "vercel": "^28.4.17",
     "vite": "4.0.3",
     "vite-tsconfig-paths": "3.5.0"
+  },
+  "dependencies": {
+    "@splinetool/react-spline": "^2.2.5",
+    "@splinetool/runtime": "^0.9.210"
   }
 }
