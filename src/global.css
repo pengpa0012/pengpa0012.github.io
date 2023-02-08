@@ -17,3 +17,33 @@
     @apply bg-gray-700 hover:bg-gray-800 text-white py-2 px-4 rounded-md;
   }
 }
+
+.icon {
+  animation: float 2s ease-in infinite alternate;
+
+}
+
+#icon-2 {
+  animation-delay: 1500ms;
+}
+
+#icon-3 {
+  animation-delay: 2000ms;
+}
+
+#icon-4 {
+  animation-delay: 500ms;
+}
+
+#icon-5 {
+  animation-delay: 1000ms;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(15px);
+  }
+}

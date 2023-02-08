@@ -6,12 +6,10 @@ export default component$(() => {
   const store = useStore({toggle: false})
 
   return (
-    <div class={`duration-200 ${store.toggle ? "text-white bg-gray-800" : "text-black bg-white"}`}>
-      <Header store={store} />
+    <div>
       <main>
-        <Slot />
+        <Slot/>
       </main>
-      <Footer />
     </div>
   );
 });
