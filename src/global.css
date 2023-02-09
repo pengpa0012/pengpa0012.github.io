@@ -1,6 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap');
+
+body {
+  font-family: 'Patrick Hand SC', cursive;
+}
 
 .container {
   max-width: 1440px;

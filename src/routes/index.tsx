@@ -20,7 +20,7 @@ export default component$(() => {
   ]
 
   return (
-    <div class={`duration-200 ${store.toggle ? "text-white bg-gray-800" : "text-black bg-white"}`}>
+    <div class={`duration-200 ${store.toggle ? "text-white bg-gray-800" : "text-[#374151] bg-white"}`}>
       <header class={`fixed inset-x-0 shadow-md duration-200 ${store.toggle ? "bg-gray-700 text-white" : "bg-white text-black"}`}>
         <div class="container flex justify-between py-6">
           <h1 class="text-xl">LOGO</h1>
@@ -38,12 +38,12 @@ export default component$(() => {
       <div class="container pt-12">
         <div class="flex justify-between items-center py-64" 
           document:onMouseMove$={(e) => {
-            const { x, y } = e;
-            store.mouse = { x, y };
+            const { x, y } = e
+            store.mouse = { x, y }
           }}
         >
           <div class="py-12">
-            <h1 class="text-7xl font-light">Godfrey Patricio</h1>
+            <h1 class="text-7xl">Godfrey Patricio</h1>
             <p class="text-lg mt-2 mb-4">Front end Developer</p>
             <div class="flex">
               <button class="mr-4 btn-primary">My Projects</button>
@@ -157,7 +157,7 @@ export default component$(() => {
             ))
           }
           <div class="text-center">
-            <button class="btn-black">View my Github</button>
+            <button class="btn-black border border-transparent hover:border-white">View my Github</button>
           </div>
         </div>
         <div class="py-36">
