@@ -1,23 +1,13 @@
 import { component$, useStore } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
+import { images } from '~/Content';
 
 export default component$(() => {
   const store = useStore({
     toggle: false,  
     mouse: { x: 0, y: 0 }
   })
-  const images = [
-    "html5",
-    "css3",
-    "javascript",
-    "react",
-    "nextjs",
-    "express",
-    "mongodb",
-    "vuejs",
-    "nuxtjs",
-    "tailwindcss"
-  ]
+ 
 
   return (
     <div class={`duration-200 ${store.toggle ? "text-white bg-gray-800" : "text-[#374151] bg-white"}`}>
@@ -28,8 +18,8 @@ export default component$(() => {
             <ul class="flex">
               <li class="text-xl cursor-pointer">Projects</li>
               <li class="ml-4 text-xl cursor-pointer">About</li>
-              <li class="ml-4 text-xl cursor-pointer border rounded-full w-12 grid items-center px-1" onClick$={() => store.toggle = !store.toggle}>
-                <div class={`w-4 h-4 rounded-full duration-200 ${store.toggle ? "bg-white" : "bg-gray-500"}`} style={{ transform: store.toggle ? "translateX(140%)" : "" }}></div>
+              <li class={`ml-4 text-xl cursor-pointer border ${store.toggle ? "border-white" : "border-gray-500"} rounded-full w-12 grid items-center px-1 duration-200`} onClick$={() => store.toggle = !store.toggle}>
+                <i class={`fa-regular ${store.toggle ? "fa-sun" : "fa-moon"} fa-xs duration-200`} style={{ transform: store.toggle ? "translateX(60%)" : "" }}></i>
               </li>
             </ul>
           </nav>
