@@ -11,7 +11,7 @@ export default component$(() => {
 
   return (
     <div class={`duration-200 ${store.toggle ? "text-white bg-gray-800" : "text-[#374151] bg-white"}`}>
-      <header class={`fixed inset-x-0 shadow-md duration-200 ${store.toggle ? "bg-gray-700 text-white" : "bg-white text-black"}`}>
+      <header class={`fixed inset-x-0 shadow-md duration-200 z-20 ${store.toggle ? "bg-gray-700 text-white" : "bg-white text-black"}`}>
         <div class="container flex justify-between py-6">
           <h1 class="text-xl">LOGO</h1>
           <nav> 
@@ -32,15 +32,15 @@ export default component$(() => {
             store.mouse = { x, y }
           }}
         >
-          <div class="py-12">
+          <div class="py-12 text-center lg:text-left mx-auto lg:mx-0">
             <h1 class="text-7xl">Godfrey Patricio</h1>
             <p class="text-lg mt-2 mb-4">Front end Developer</p>
-            <div class="flex">
+            <div class="flex justify-center lg:justify-start">
               <button class="mr-4 btn-primary">My Projects</button>
               <button>Something {Math.floor(store.mouse.x * 0.05)} {Math.floor(store.mouse.y * 0.05)}</button>
             </div>
           </div>
-          <svg width="399" height="337" viewBox="0 0 399 337" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="hidden lg:block" width="399" height="337" viewBox="0 0 399 337" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="illustration">
             <g id="person" clip-path="url(#clip0_3_33)">
             <g id="Group">
@@ -116,7 +116,7 @@ export default component$(() => {
             <div class="max-w-4xl mx-auto flex flex-wrap gap-12 justify-center">
               {
                 images.map((img, i) => (
-                  <img key={`img-${i}`} src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${img}/${img}-${img == "tailwindcss" ? "plain" : "original"}.svg`} class="w-24" title={img}/> 
+                  <img key={`img-${i}`} src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${img}/${img}-${img == "tailwindcss" ? "plain" : "original"}.svg`} class="w-24" title={img} style={{filter: store.toggle && (img == "nextjs" || img == "express") ? "brightness(0) invert(1)" : ""}}/> 
                 ))
               }
             
@@ -127,8 +127,8 @@ export default component$(() => {
           <h2 class="text-3xl text-center mb-32">SOME OF MY WORKS</h2>
           {
             [1,2,3].map((item, i) => (
-              <div class="flex max-w-4xl mx-auto my-32" key={`${item}-${i}`}>
-                <img src="https://via.placeholder.com/300x250" class="mr-20"/>
+              <div class="flex flex-col md:flex-row justify-center max-w-4xl mx-auto my-32" key={`${item}-${i}`}>
+                <img src="https://via.placeholder.com/300x250" class="mr-0 md:mr-20 mb-4 md:mb-0"/>
                 <div>
                   <h1 class="text-2xl">TITLE</h1>
                   <p class="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi maiores ratione illum animi dolore autem sapiente ullam distinctio laboriosam pariatur?</p>
@@ -147,23 +147,20 @@ export default component$(() => {
             ))
           }
           <div class="text-center">
-            <button class="btn-black border border-transparent hover:border-white">View my Github</button>
+            <a href="https://github.com/pengpa0012" target="_blank">
+              <button class="btn-black border border-transparent hover:border-white">View my Github</button>
+            </a>
           </div>
-        </div>
-        <div class="py-36">
-          <div class="text-center mb-32">
-            <h2 class="text-3xl mb-12">REACH ME ON</h2>
-            <p class="text-xl max-w-4xl mx-auto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium quas assumenda mollitia iste numquam esse voluptas consectetur, necessitatibus delectus aliquam possimus non soluta dignissimos quaerat deserunt, ipsa quos error eum?</p>
-          </div>
-          <ul class="flex justify-center gap-4">
-            <li>ICON</li>
-            <li>ICON</li>
-            <li>ICON</li>
-          </ul>
         </div>
       </div>
       <footer>
-        <h1 class="text-center py-12">Made by Godfrey Patricio &copy; 2023</h1>
+        <div class="py-12">
+        <h1 class="text-center mb-4">Made by Godfrey Patricio &copy; 2023</h1>
+          <div class="flex justify-center gap-4">
+            <i class="fa-brands fa-linkedin cursor-pointer"></i>
+            <i class="fa-sharp fa-solid fa-envelope cursor-pointer"></i>
+          </div>
+        </div>
       </footer>
     </div>
   );
