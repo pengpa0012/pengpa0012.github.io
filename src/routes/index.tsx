@@ -13,7 +13,7 @@ export default component$(() => {
     <div class={`duration-200 ${store.toggle ? "text-white bg-gray-800" : "text-[#374151] bg-white"} overflow-x-hidden`}>
       <header class={`fixed inset-x-0 shadow-md duration-200 z-20 ${store.toggle ? "bg-gray-700 text-white" : "bg-white text-black"}`}>
         <div class="container flex justify-between py-6">
-          <h1 class="text-xl">LOGO</h1>
+          <div class="text-xl cursor-pointer" onClick$={() => window.scrollTo(0, 0)}>PENG</div>
           <nav> 
             <ul class="flex">
               <li class="text-xl cursor-pointer">Projects</li>
