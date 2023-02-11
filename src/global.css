@@ -44,11 +44,41 @@ body {
   animation-delay: 1000ms;
 }
 
+.fade-right {
+  animation: left 1s ease-in forwards;
+}
+
+.fade-left {
+  animation: right 1s ease-in forwards;
+}
+
 @keyframes float {
   from {
     transform: translateY(0);
   }
   to {
     transform: translateY(15px);
+  }
+}
+
+@keyframes left {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes right {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }

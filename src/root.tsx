@@ -17,10 +17,15 @@ export default component$(() => {
         <meta charSet="utf-8" />
         <RouterHead />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"></link>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"></link>
       </head>
       <body lang="en">
         <RouterOutlet />
         <ServiceWorkerRegister />
+        <script>
+          AOS.init();
+        </script>
       </body>
     </QwikCityProvider>
   );

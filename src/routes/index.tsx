@@ -10,7 +10,7 @@ export default component$(() => {
  
 
   return (
-    <div class={`duration-200 ${store.toggle ? "text-white bg-gray-800" : "text-[#374151] bg-white"}`}>
+    <div class={`duration-200 ${store.toggle ? "text-white bg-gray-800" : "text-[#374151] bg-white"} overflow-x-hidden`}>
       <header class={`fixed inset-x-0 shadow-md duration-200 z-20 ${store.toggle ? "bg-gray-700 text-white" : "bg-white text-black"}`}>
         <div class="container flex justify-between py-6">
           <h1 class="text-xl">LOGO</h1>
@@ -32,7 +32,7 @@ export default component$(() => {
             store.mouse = { x, y }
           }}
         >
-          <div class="py-12 text-center lg:text-left mx-auto lg:mx-0">
+          <div class="py-12 text-center lg:text-left mx-auto lg:mx-0 fade-right">
             <h1 class="text-7xl">Godfrey Patricio</h1>
             <p class="text-lg mt-2 mb-4">Front end Developer</p>
             <div class="flex justify-center lg:justify-start">
@@ -40,9 +40,9 @@ export default component$(() => {
               <button>Something {Math.floor(store.mouse.x * 0.05)} {Math.floor(store.mouse.y * 0.05)}</button>
             </div>
           </div>
-          <svg class="hidden lg:block" width="399" height="337" viewBox="0 0 399 337" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="hidden lg:block fade-left" width="399" height="337" viewBox="0 0 399 337" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="illustration">
-            <g id="person" clip-path="url(#clip0_3_33)">
+            <g id="person" clip-path="url(#clip0_3_33)" class="duration-200" style={{ transform: `translate(${Math.floor(store.mouse.x * 0.01) - 10}px, ${Math.floor(store.mouse.y * 0.01) - 10}px)` }}>
             <g id="Group">
             <g id="Group_2">
             <path id="Vector" d="M204.612 235.611C230.787 235.611 252.007 214.392 252.007 188.217C252.007 162.042 230.787 140.822 204.612 140.822C178.437 140.822 157.218 162.042 157.218 188.217C157.218 214.392 178.437 235.611 204.612 235.611Z" fill="#FFDDB1"/>
@@ -108,15 +108,15 @@ export default component$(() => {
         </div>
         <div class="py-36">
           <div class="text-center mb-32">
-            <h2 class="text-3xl mb-12">ABOUT ME</h2>
-            <p class="text-xl max-w-4xl mx-auto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium quas assumenda mollitia iste numquam esse voluptas consectetur, necessitatibus delectus aliquam possimus non soluta dignissimos quaerat deserunt, ipsa quos error eum?</p>
+            <h2 class="text-3xl mb-12" data-aos="fade-up">ABOUT ME</h2>
+            <p class="text-xl max-w-4xl mx-auto" data-aos="fade-up" data-aos-duration="1000">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium quas assumenda mollitia iste numquam esse voluptas consectetur, necessitatibus delectus aliquam possimus non soluta dignissimos quaerat deserunt, ipsa quos error eum?</p>
           </div>
           <div class="text-center">
-            <h2 class="text-3xl mb-12">Things that i use</h2>
+            <h2 class="text-3xl mb-12" data-aos="fade-up" data-aos-duration="1000">Things that i use</h2>
             <div class="max-w-4xl mx-auto flex flex-wrap gap-12 justify-center">
               {
                 images.map((img, i) => (
-                  <img key={`img-${i}`} src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${img}/${img}-${img == "tailwindcss" ? "plain" : "original"}.svg`} class="w-24" title={img} style={{filter: store.toggle && (img == "nextjs" || img == "express") ? "brightness(0) invert(1)" : ""}}/> 
+                  <img key={`img-${i}`} src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${img}/${img}-${img == "tailwindcss" ? "plain" : "original"}.svg`} class="w-24" title={img} style={{filter: store.toggle && (img == "nextjs" || img == "express") ? "brightness(0) invert(1)" : ""}} data-aos="fade-up" data-aos-duration="2000"/> 
                 ))
               }
             
@@ -124,10 +124,10 @@ export default component$(() => {
           </div>
         </div>
         <div class="py-36">
-          <h2 class="text-3xl text-center mb-32">SOME OF MY WORKS</h2>
+          <h2 class="text-3xl text-center mb-32" data-aos="fade-up">SOME OF MY WORKS</h2>
           {
             [1,2,3].map((item, i) => (
-              <div class="flex flex-col md:flex-row justify-center max-w-4xl mx-auto my-32" key={`${item}-${i}`}>
+              <div class="flex flex-col md:flex-row justify-center max-w-4xl mx-auto my-32" key={`${item}-${i}`} data-aos="fade-up">
                 <img src="https://via.placeholder.com/300x250" class="mr-0 md:mr-20 mb-4 md:mb-0"/>
                 <div>
                   <h1 class="text-2xl">TITLE</h1>
@@ -148,7 +148,7 @@ export default component$(() => {
           }
           <div class="text-center">
             <a href="https://github.com/pengpa0012" target="_blank">
-              <button class="btn-black border border-transparent hover:border-white">View my Github</button>
+              <button class="btn-black border border-transparent hover:border-white" data-aos="fade-up">View my Github</button>
             </a>
           </div>
         </div>
