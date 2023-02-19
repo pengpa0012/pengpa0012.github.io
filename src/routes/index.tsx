@@ -5,12 +5,15 @@ import { images } from '~/Content';
 export default component$(() => {
   const store = useStore({
     toggle: false,  
-    mouse: { x: 0, y: 0 }
+    mouse: { x: 0, y: 0 },
+    scale: 1
   })
  
 
   return (
-    <div class={`duration-200 ${store.toggle ? "text-white bg-gray-800" : "text-[#374151] bg-white"} overflow-x-hidden`}>
+    <div class={`duration-200 ${store.toggle ? "text-white bg-gray-800" : "text-[#374151] bg-white"} overflow-x-hidden`} window:onScroll$={(e) => {
+      store.scale = (window.scrollY * 0.004 / 2) + 1
+    }}>
       <header class={`fixed inset-x-0 shadow-md duration-200 z-20 ${store.toggle ? "bg-gray-700 text-white" : "bg-white text-black"}`}>
         <div class="container flex justify-between py-6">
           <div class="text-xl cursor-pointer" onClick$={() => window.scrollTo(0, 0)}>PENG</div>
@@ -42,7 +45,7 @@ export default component$(() => {
           </div>
           <svg class="hidden lg:block fade-left" width="399" height="337" viewBox="0 0 399 337" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g id="illustration">
-            <g id="person" clip-path="url(#clip0_3_33)" class="duration-200" style={{ transform: `translate(${Math.floor(store.mouse.x * 0.01) - 10}px, ${Math.floor(store.mouse.y * 0.01) - 10}px)` }}>
+            <g id="person" clip-path="url(#clip0_3_33)" class="duration-200 origin-center" style={{ transform: `translate(${Math.floor(store.mouse.x * 0.01) - 10}px, ${Math.floor(store.mouse.y * 0.01) - 10}px) scale(${store.scale})` }}>
             <g id="Group">
             <g id="Group_2">
             <path id="Vector" d="M204.612 235.611C230.787 235.611 252.007 214.392 252.007 188.217C252.007 162.042 230.787 140.822 204.612 140.822C178.437 140.822 157.218 162.042 157.218 188.217C157.218 214.392 178.437 235.611 204.612 235.611Z" fill="#FFDDB1"/>
@@ -113,10 +116,10 @@ export default component$(() => {
           </div>
           <div class="text-center">
             <h2 class="text-3xl mb-12" data-aos="fade-up" data-aos-duration="1000">Things that i use</h2>
-            <div class="max-w-4xl mx-auto flex flex-wrap gap-12 justify-center">
+            <div class="max-w-5xl mx-auto flex flex-wrap gap-12 justify-center">
               {
                 images.map((img, i) => (
-                  <img key={`img-${i}`} src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${img}/${img}-${img == "tailwindcss" ? "plain" : "original"}.svg`} class="w-24" title={img} style={{filter: store.toggle && (img == "nextjs" || img == "express") ? "brightness(0) invert(1)" : ""}} data-aos="fade-up" data-aos-duration="2000"/> 
+                  <img key={`img-${i}`} src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${img}/${img}-${img == "tailwindcss" ? "plain" : "original"}.svg`} class="w-24" title={img} style={{filter: store.toggle && (img == "nextjs" || img == "express" || img == "github") ? "brightness(0) invert(1)" : ""}} data-aos="fade-up" data-aos-duration="2000"/> 
                 ))
               }
             
