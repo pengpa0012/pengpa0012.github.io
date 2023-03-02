@@ -114,7 +114,7 @@ export default component$(() => {
         <div class="py-36">
           <div class="text-center mb-32">
             <h2 class="text-3xl mb-12" data-aos="fade-up">ABOUT ME</h2>
-            <p class="text-xl max-w-4xl mx-auto" data-aos="fade-up" data-aos-duration="1000">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusantium quas assumenda mollitia iste numquam esse voluptas consectetur, necessitatibus delectus aliquam possimus non soluta dignissimos quaerat deserunt, ipsa quos error eum?</p>
+            <p class="text-xl max-w-4xl mx-auto" data-aos="fade-up" data-aos-duration="1000">Hi there! I'm Godfrey Patricio, a front-end developer with 1+ years of experience. I mainly uses React for my projects but i also have a background in Vue.js. Currently, I'm learning the MERN stack to build fullstack projects. I'm passionate about learning new things and delivering high-quality work that meets end-users needs.</p>
           </div>
           <div class="text-center">
             <h2 class="text-3xl mb-12" data-aos="fade-up" data-aos-duration="1000">Things that i use</h2>
@@ -162,8 +162,12 @@ export default component$(() => {
         <div class="py-12">
         <h1 class="text-center mb-4">Made by Godfrey Patricio &copy; 2023</h1>
           <div class="flex justify-center gap-4">
-            <i class="fa-brands fa-linkedin cursor-pointer"></i>
-            <i class="fa-sharp fa-solid fa-envelope cursor-pointer"></i>
+            <a href="https://www.linkedin.com/in/godfrey-patricio-513b6b203/" target="_blank">
+              <i class="fa-brands fa-linkedin cursor-pointer"></i>
+            </a>
+            <a href="mailto:godfreynecesario@gmail.com">
+              <i class="fa-sharp fa-solid fa-envelope cursor-pointer"></i>
+            </a>
           </div>
         </div>
       </footer>
