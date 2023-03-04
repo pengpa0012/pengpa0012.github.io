@@ -13,3 +13,13 @@ export const images = [
   "tailwindcss",
   "github"
 ]
+
+export const projects = [
+  {
+    title: "SOCIAL APP",
+    description: "I developed a dynamic social media app using MERN stack that allows users to easily signup and login to create and delete posts. Additionally,  users can follow and unfollow other users, and interact with their posts by commenting and liking.",
+    icons: [],
+    demo_link: "https://mern-social-app-client.vercel.app/",
+    code_link: "https://github.com/pengpa0012/mern-social-app"
+  }
+]

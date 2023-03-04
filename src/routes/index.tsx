@@ -1,6 +1,6 @@
 import { component$, useStore } from '@builder.io/qwik';
-import type { DocumentHead } from '@builder.io/qwik-city';
-import { images } from '~/Content';
+import { DocumentHead, Link } from '@builder.io/qwik-city';
+import { images, projects } from '~/Content';
 
 export default component$(() => {
   const store = useStore({
@@ -131,21 +131,26 @@ export default component$(() => {
         <div class="py-36">
           <h2 class="text-3xl text-center mb-32" data-aos="fade-up">SOME OF MY WORKS</h2>
           {
-            [1,2,3].map((item, i) => (
+            projects.map((item, i) => (
               <div class="flex flex-col md:flex-row justify-center max-w-4xl mx-auto my-32" key={`${item}-${i}`} data-aos="fade-up">
                 <img src="https://via.placeholder.com/300x250" class="mr-0 md:mr-20 mb-4 md:mb-0"/>
                 <div>
-                  <h1 class="text-2xl">TITLE</h1>
-                  <p class="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi maiores ratione illum animi dolore autem sapiente ullam distinctio laboriosam pariatur?</p>
+                  <h1 class="text-2xl">{item.title}</h1>
+                  <p class="my-4">{item.description}</p>
                   <ul class="flex gap-4">
-                    <li>ICON</li>
-                    <li>ICON</li>
-                    <li>ICON</li>
-                    <li>ICON</li>
+                    {
+                      item.icons.map((e, i) => (
+                        <li key={`icon-${i}`}>{e}</li>
+                      ))
+                    }
                   </ul>
-                  <div class="flex mt-10">
-                    <button class="mr-4 btn-primary">DEMO</button>
-                    <button>VIEW CODE</button>
+                  <div class="flex items-center mt-10">
+                    <Link href={item.demo_link} target="_blank">
+                      <button class="mr-4 btn-primary">DEMO</button>
+                    </Link>
+                    <Link href={item.code_link} target="_blank">
+                      <button>VIEW CODE</button>
+                    </Link>
                   </div>
                 </div>
               </div>
