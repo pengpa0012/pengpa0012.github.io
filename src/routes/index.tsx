@@ -135,7 +135,7 @@ export default component$(() => {
           {
             projectsContent.map((item, i) => (
               <div class="flex flex-col md:flex-row justify-center max-w-5xl mx-auto my-32" key={`${item}-${i}`} data-aos="fade-up">
-                <img src={item.image_url} class="mr-0 md:mr-12 mb-4 md:mb-0 max-w-md"/>
+                <img src={item.image_url} class="mr-0 md:mr-12 mb-4 md:mb-0 w-full md:max-w-md"/>
                 <div>
                   <h1 class="text-2xl">{item.title}</h1>
                   <p class="my-4">{item.description}</p>
