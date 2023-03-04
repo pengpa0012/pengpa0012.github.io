@@ -134,8 +134,8 @@ export default component$(() => {
           <h2 class="text-3xl text-center mb-32" data-aos="fade-up">SOME OF MY WORKS</h2>
           {
             projectsContent.map((item, i) => (
-              <div class="flex flex-col md:flex-row justify-center max-w-4xl mx-auto my-32" key={`${item}-${i}`} data-aos="fade-up">
-                <img src="https://via.placeholder.com/300x250" class="mr-0 md:mr-20 mb-4 md:mb-0"/>
+              <div class="flex flex-col md:flex-row justify-center max-w-5xl mx-auto my-32" key={`${item}-${i}`} data-aos="fade-up">
+                <img src={item.image_url} class="mr-0 md:mr-12 mb-4 md:mb-0 max-w-md"/>
                 <div>
                   <h1 class="text-2xl">{item.title}</h1>
                   <p class="my-4">{item.description}</p>
