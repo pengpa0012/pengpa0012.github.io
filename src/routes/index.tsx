@@ -1,8 +1,10 @@
 import { component$, useStore } from '@builder.io/qwik';
 import { DocumentHead, Link } from '@builder.io/qwik-city';
-import { images, projects } from '~/Content';
+import { images, projectsContent } from '~/Content';
 
 export default component$(() => {
+  const projects = typeof document !== 'undefined' ? document.getElementById("projects") : undefined
+  const about = typeof document !== 'undefined' ? document.getElementById("about") : undefined
   const store = useStore({
     toggle: false,  
     mouse: { x: 0, y: 0 },
@@ -19,8 +21,8 @@ export default component$(() => {
           <div class="text-xl cursor-pointer" onClick$={() => window.scrollTo(0, 0)}>PENG</div>
           <nav> 
             <ul class="flex">
-              <li class="text-xl cursor-pointer">Projects</li>
-              <li class="ml-4 text-xl cursor-pointer">About</li>
+              <li class="text-xl cursor-pointer" onClick$={() => projects!.scrollIntoView()}>Projects</li>
+              <li class="ml-4 text-xl cursor-pointer" onClick$={() => about!.scrollIntoView()}>About</li>
               <li class={`ml-4 text-xl cursor-pointer border ${store.toggle ? "border-white" : "border-gray-500"} rounded-full w-12 grid items-center px-1 duration-200`} onClick$={() => store.toggle = !store.toggle}>
                 <i class={`fa-regular ${store.toggle ? "fa-sun" : "fa-moon"} fa-xs duration-200`} style={{ transform: store.toggle ? "translateX(60%)" : "" }}></i>
               </li>
@@ -39,8 +41,8 @@ export default component$(() => {
             <h1 class="text-7xl">Godfrey Patricio</h1>
             <p class="text-lg mt-2 mb-4">Front end Developer</p>
             <div class="flex justify-center lg:justify-start">
-              <button class="mr-4 btn-primary">My Projects</button>
-              <button>Something {Math.floor(store.mouse.x * 0.05)} {Math.floor(store.mouse.y * 0.05)}</button>
+              <button class="mr-4 btn-primary" onClick$={() => projects!.scrollIntoView()}>My Projects</button>
+              {/* <button>Something {Math.floor(store.mouse.x * 0.05)} {Math.floor(store.mouse.y * 0.05)}</button> */}
             </div>
           </div>
           <div class="fade-left">
@@ -111,7 +113,7 @@ export default component$(() => {
             </svg>
           </div>
         </div>
-        <div class="py-36">
+        <div class="py-36" id="about">
           <div class="text-center mb-32">
             <h2 class="text-3xl mb-12" data-aos="fade-up">ABOUT ME</h2>
             <p class="text-xl max-w-4xl mx-auto" data-aos="fade-up" data-aos-duration="1000">Hi there! I'm Godfrey Patricio, a front-end developer with 1+ years of experience. I mainly uses React for my projects but i also have a background in Vue.js. Currently, I'm learning the MERN stack to build fullstack projects. I'm passionate about learning new things and delivering high-quality work that meets end-users needs.</p>
@@ -128,10 +130,10 @@ export default component$(() => {
             </div>
           </div>
         </div>
-        <div class="py-36">
+        <div class="py-36" id="projects">
           <h2 class="text-3xl text-center mb-32" data-aos="fade-up">SOME OF MY WORKS</h2>
           {
-            projects.map((item, i) => (
+            projectsContent.map((item, i) => (
               <div class="flex flex-col md:flex-row justify-center max-w-4xl mx-auto my-32" key={`${item}-${i}`} data-aos="fade-up">
                 <img src="https://via.placeholder.com/300x250" class="mr-0 md:mr-20 mb-4 md:mb-0"/>
                 <div>

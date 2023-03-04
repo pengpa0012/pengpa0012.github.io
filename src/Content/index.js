@@ -14,7 +14,7 @@ export const images = [
   "github"
 ]
 
-export const projects = [
+export const projectsContent = [
   {
     title: "SOCIAL APP",
     description: "I developed a dynamic social media app using MERN stack that allows users to easily signup and login to create and delete posts. Additionally,  users can follow and unfollow other users, and interact with their posts by commenting and liking.",
