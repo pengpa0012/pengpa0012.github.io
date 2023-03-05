@@ -18,12 +18,12 @@ export default component$(() => {
     }}>
       <header class={`fixed inset-x-0 shadow-md duration-200 z-20 ${store.toggle ? "bg-gray-700 text-white" : "bg-white text-black"}`}>
         <div class="container flex justify-between py-6">
-          <div class="text-xl cursor-pointer" onClick$={() => window.scrollTo(0, 0)}>PENG</div>
+          <div class="text-md sm:text-xl cursor-pointer" onClick$={() => window.scrollTo(0, 0)}>PENG</div>
           <nav> 
             <ul class="flex">
-              <li class="text-xl cursor-pointer" onClick$={() => projects!.scrollIntoView()}>Projects</li>
-              <li class="ml-4 text-xl cursor-pointer" onClick$={() => about!.scrollIntoView()}>About</li>
-              <li class={`ml-4 text-xl cursor-pointer border ${store.toggle ? "border-white" : "border-gray-500"} rounded-full w-12 grid items-center px-1 duration-200`} onClick$={() => store.toggle = !store.toggle}>
+              <li class="text-md sm:text-xl cursor-pointer" onClick$={() => projects!.scrollIntoView()}>Projects</li>
+              <li class="mx-2 sm:mx-4 text-md sm:text-xl cursor-pointer" onClick$={() => about!.scrollIntoView()}>About</li>
+              <li class={`text-md sm:text-xl cursor-pointer border ${store.toggle ? "border-white" : "border-gray-500"} rounded-full w-12 grid items-center px-1 duration-200`} onClick$={() => store.toggle = !store.toggle}>
                 <i class={`fa-regular ${store.toggle ? "fa-sun" : "fa-moon"} fa-xs duration-200`} style={{ transform: store.toggle ? "translateX(60%)" : "" }}></i>
               </li>
             </ul>
@@ -38,10 +38,10 @@ export default component$(() => {
           }}
         >
           <div class="py-12 text-center lg:text-left mx-auto lg:mx-0 fade-right">
-            <h1 class="text-7xl">Godfrey Patricio</h1>
-            <p class="text-lg mt-2 mb-4">Front end Developer</p>
+            <h1 class="text-4xl sm:text-7xl">Godfrey Patricio</h1>
+            <p class="text-md sm:text-lg mt-2 mb-4">Front end Developer</p>
             <div class="flex justify-center lg:justify-start">
-              <button class="mr-4 btn-primary" onClick$={() => projects!.scrollIntoView()}>My Projects</button>
+              <button class="text-sm sm:text-lg mr-4 btn-primary" onClick$={() => projects!.scrollIntoView()}>My Projects</button>
               {/* <button>Something {Math.floor(store.mouse.x * 0.05)} {Math.floor(store.mouse.y * 0.05)}</button> */}
             </div>
           </div>
@@ -113,31 +113,31 @@ export default component$(() => {
             </svg>
           </div>
         </div>
-        <div class="py-36" id="about">
+        <div class="py-20 sm:py-36" id="about">
           <div class="text-center mb-32">
-            <h2 class="text-3xl mb-12" data-aos="fade-up">ABOUT ME</h2>
-            <p class="text-xl max-w-4xl mx-auto" data-aos="fade-up" data-aos-duration="1000">Hi there! I'm Godfrey Patricio, a front-end developer with 1+ years of experience. I mainly uses React for my projects but i also have a background in Vue.js. Currently, I'm learning the MERN stack to build fullstack projects. I'm passionate about learning new things and delivering high-quality work that meets end-users needs.</p>
+            <h2 class="text-2xl sm:text-3xl mb-4 sm:mb-12" data-aos="fade-up">ABOUT ME</h2>
+            <p class="text-md sm:text-xl max-w-4xl mx-auto" data-aos="fade-up" data-aos-duration="1000">Hi there! I'm Godfrey Patricio, a front-end developer with 1+ years of experience. I mainly uses React for my projects but i also have a background in Vue.js. Currently, I'm learning the MERN stack to build fullstack projects. I'm passionate about learning new things and delivering high-quality work that meets end-users needs.</p>
           </div>
           <div class="text-center">
-            <h2 class="text-3xl mb-12" data-aos="fade-up" data-aos-duration="1000">Things that i use</h2>
-            <div class="max-w-5xl mx-auto flex flex-wrap gap-12 justify-center">
+            <h2 class="text-2xl sm:text-3xl mb-4 sm:mb-12" data-aos="fade-up" data-aos-duration="1000">Things that i use</h2>
+            <div class="max-w-5xl mx-auto flex flex-wrap gap-4 sm:gap-12 justify-center">
               {
                 images.map((img, i) => (
-                  <img key={`img-${i}`} src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${img}/${img}-${img == "tailwindcss" ? "plain" : "original"}.svg`} class="w-24" title={img} style={{filter: store.toggle && (img == "nextjs" || img == "express" || img == "github") ? "brightness(0) invert(1)" : ""}} data-aos="fade-up" data-aos-duration="2000"/> 
+                  <img key={`img-${i}`} src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${img}/${img}-${img == "tailwindcss" ? "plain" : "original"}.svg`} class="w-12 sm:w-24" title={img} style={{filter: store.toggle && (img == "nextjs" || img == "express" || img == "github") ? "brightness(0) invert(1)" : ""}} data-aos="fade-up" data-aos-duration="2000"/> 
                 ))
               }
             
             </div>
           </div>
         </div>
-        <div class="py-36" id="projects">
-          <h2 class="text-3xl text-center mb-32" data-aos="fade-up">SOME OF MY WORKS</h2>
+        <div class="py-20 sm:py-36" id="projects">
+          <h2 class="text-2xl sm:text-3xl text-center mb-4 sm:mb-32" data-aos="fade-up">SOME OF MY WORKS</h2>
           {
             projectsContent.map((item, i) => (
-              <div class="flex flex-col md:flex-row justify-center max-w-4xl mx-auto my-32" key={`${item}-${i}`} data-aos="fade-up">
+              <div class="flex flex-col md:flex-row justify-center max-w-4xl mx-auto my-12 sm:my-32" key={`${item}-${i}`} data-aos="fade-up">
                 <img src={item.image_url} class="mr-0 md:mr-12 mb-4 md:mb-0 w-full rounded-md"/>
                 <div>
-                  <h1 class="text-2xl">{item.title}</h1>
+                  <h1 class="text-xl sm:text-2xl">{item.title}</h1>
                   <p class="my-4">{item.description}</p>
                   <ul class="flex gap-4">
                     {
@@ -146,12 +146,12 @@ export default component$(() => {
                       ))
                     }
                   </ul>
-                  <div class="flex items-center mt-10">
+                  <div class="flex items-center mt-6 sm:mt-10">
                     <Link href={item.demo_link} target="_blank">
-                      <button class="mr-4 btn-primary">DEMO</button>
+                      <button class="text-sm sm:text-lg mr-4 btn-primary">DEMO</button>
                     </Link>
                     <Link href={item.code_link} target="_blank">
-                      <button>VIEW CODE</button>
+                      <button class="text-sm sm:text-lg">VIEW CODE</button>
                     </Link>
                   </div>
                 </div>
@@ -160,7 +160,7 @@ export default component$(() => {
           }
           <div class="text-center">
             <a href="https://github.com/pengpa0012" target="_blank">
-              <button class="btn-black border border-transparent hover:border-white" data-aos="fade-up">View my Github</button>
+              <button class="text-sm sm:text-lg btn-black border border-transparent hover:border-white" data-aos="fade-up">View my Github</button>
             </a>
           </div>
         </div>
