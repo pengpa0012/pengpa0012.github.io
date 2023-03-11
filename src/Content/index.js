@@ -22,5 +22,13 @@ export const projectsContent = [
     icons: [],
     demo_link: "https://mern-social-app-client.vercel.app/",
     code_link: "https://github.com/pengpa0012/mern-social-app"
+  },
+  {
+    title: "PRODUCT MANAGEMENT",
+    image_url: "/images/product-management.png",
+    description: "A full-stack web application using MERN stack that enables users to add and remove and update products, it also has dashboard for monitoring overall item status.",
+    icons: [],
+    demo_link: "https://mern-product-management-client.vercel.app/",
+    code_link: "https://github.com/pengpa0012/mern-product-management"
   }
 ]
