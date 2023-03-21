@@ -24,7 +24,7 @@ export default component$(() => {
               <li class="text-md sm:text-xl cursor-pointer" onClick$={() => projects!.scrollIntoView()}>Projects</li>
               <li class="mx-2 sm:mx-4 text-md sm:text-xl cursor-pointer" onClick$={() => about!.scrollIntoView()}>About</li>
               <li class={`text-md sm:text-xl cursor-pointer border ${store.toggle ? "border-white" : "border-gray-500"} rounded-full w-12 grid items-center px-1 duration-200`} onClick$={() => store.toggle = !store.toggle}>
-                <i class={`fa-regular ${store.toggle ? "fa-sun" : "fa-moon"} fa-xs duration-200`} style={{ transform: store.toggle ? "translateX(60%)" : "" }}></i>
+                <i class={`fa-regular ${store.toggle ? "fa-moon" : "fa-sun"} fa-xs duration-200`} style={{ transform: store.toggle ? "translateX(60%)" : "" }}></i>
               </li>
             </ul>
           </nav>
@@ -37,6 +37,11 @@ export default component$(() => {
             store.mouse = { x, y }
           }}
         >
+          <h1 style={{
+            position: "fixed",
+            top: `${store.mouse.y}px`,
+            left: `${store.mouse.x}px`,
+          }} class="blob"></h1>
           <div class="py-12 text-center lg:text-left mx-auto lg:mx-0 fade-right">
             <h1 class="text-4xl sm:text-7xl">Godfrey Patricio</h1>
             <p class="text-md sm:text-lg mt-2 mb-4">Front end Developer</p>

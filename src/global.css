@@ -56,6 +56,20 @@ body {
   animation: right 1s ease-in forwards;
 }
 
+.bg-gray-800 .blob {
+  border-radius: 50%;
+  width: 500px;
+  height: 500px;
+  background:linear-gradient( to top right, rgba(63,81,181,1) 0%, rgba(3,155,229 ,1) 40%);
+	box-shadow: 1px 1px 30px rgba(2,119,189 ,1);
+  filter: blur(150px);
+  pointer-events: none;
+  transition: 1000ms;
+  opacity: .8;
+  transform: translate(-50%, -50%);
+  transition-property: background, transform;
+}
+
 @keyframes float {
   from {
     transform: translateY(0);
