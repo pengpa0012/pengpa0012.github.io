@@ -116,7 +116,7 @@ export default component$(() => {
         <div class="py-20 sm:py-36" id="about">
           <div class="text-center mb-32">
             <h2 class="text-2xl sm:text-3xl mb-4 sm:mb-12" data-aos="fade-up">ABOUT ME</h2>
-            <p class="text-md sm:text-xl max-w-4xl mx-auto" data-aos="fade-up" data-aos-duration="1000">Hi there! I'm Godfrey Patricio, a front-end developer with 1+ years of experience. I mainly uses React for my projects but i also have a background in Vue.js. Currently, I'm learning the MERN stack to build fullstack projects. I'm passionate about learning new things and delivering high-quality work that meets end-users needs.</p>
+            <p class="text-md sm:text-xl max-w-4xl mx-auto" data-aos="fade-up" data-aos-duration="1000">Hi there! I'm Godfrey Patricio, a front-end developer with over 2 years of experience. I mainly uses React for my projects but i also have a background in Vue.js. Currently, I'm learning the MERN stack to build fullstack projects. I'm passionate about learning new things and delivering high-quality work that meets end-users needs.</p>
           </div>
           <div class="text-center">
             <h2 class="text-2xl sm:text-3xl mb-4 sm:mb-12" data-aos="fade-up" data-aos-duration="1000">Things that i use</h2>
