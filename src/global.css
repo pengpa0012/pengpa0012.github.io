@@ -70,6 +70,12 @@ body {
   transition-property: background, transform;
 }
 
+@media (max-width: 768px) {
+  .bg-gray-800 .blob {
+    display: none;
+  }
+}
+
 @keyframes float {
   from {
     transform: translateY(0);

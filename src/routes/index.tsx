@@ -139,9 +139,9 @@ export default component$(() => {
           <h2 class="text-2xl sm:text-3xl text-center mb-4 sm:mb-32" data-aos="fade-up">SOME OF MY WORKS</h2>
           {
             projectsContent.map((item, i) => (
-              <div class="flex flex-col md:flex-row justify-center max-w-4xl mx-auto my-12 sm:my-32" key={`${item}-${i}`} data-aos="fade-up">
-                <img src={item.image_url} class="mr-0 md:mr-12 mb-4 md:mb-0 w-full max-w-[300px] rounded-md !shadow-md"/>
-                <div>
+              <div class="flex flex-col md:flex-row justify-center max-w-4xl mx-auto my-16 sm:my-32" key={`${item}-${i}`} data-aos="fade-up">
+                <img src={item.image_url} class="mx-auto sm:mx-0 md:mr-12 mb-4 md:mb-0 w-full max-w-[300px] rounded-md !shadow-md"/>
+                <div class="text-center sm:text-left">
                   <h1 class="text-xl sm:text-2xl">{item.title}</h1>
                   <p class="my-4">{item.description}</p>
                   <ul class="flex gap-4">
@@ -151,7 +151,7 @@ export default component$(() => {
                       ))
                     }
                   </ul>
-                  <div class="flex items-center mt-6 sm:mt-10">
+                  <div class="flex justify-center sm:justify-start items-center mt-2 sm:mt-10">
                     <Link href={item.demo_link} target="_blank">
                       <button class="text-sm sm:text-lg mr-4 btn-primary">DEMO</button>
                     </Link>
