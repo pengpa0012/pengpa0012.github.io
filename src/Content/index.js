@@ -30,5 +30,13 @@ export const projectsContent = [
     icons: [],
     demo_link: "https://mern-product-management-client.vercel.app/",
     code_link: "https://github.com/pengpa0012/mern-product-management"
+  },
+  {
+    title: "3D World",
+    image_url: "/images/threejs.png",
+    description: "I'm currently learning 3D website. For this project I used react-three-fiber for adding meshes and textures and react-three-cannon for collision of the meshes.",
+    icons: [],
+    demo_link: "https://landing-page-threejs-eight.vercel.app/",
+    code_link: "https://github.com/pengpa0012/landing-page-threejs"
   }
 ]
