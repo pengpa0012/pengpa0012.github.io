@@ -8,7 +8,7 @@ html {
 }
 
 body {
-  font-family: 'Patrick Hand SC', sans-serif;
+  font-family: cursive;
 }
 
 .container {
@@ -71,6 +71,10 @@ body {
 }
 
 @media (max-width: 768px) {
+  body {
+    font-family: sans-serif;
+  }
+
   .bg-gray-800 .blob {
     display: none;
   }
