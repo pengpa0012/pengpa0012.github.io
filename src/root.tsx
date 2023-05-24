@@ -28,8 +28,8 @@ export default component$(() => {
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"></link>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"></link>
-        <script defer async src="https://www.googletagmanager.com/gtag/js?id=G-59EYNYXNMS"></script>
-        <script defer async type="text/javascript" dangerouslySetInnerHTML={analyticsScript}></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-59EYNYXNMS"></script>
+        <script type="text/javascript" dangerouslySetInnerHTML={analyticsScript}></script>
       </head>
       <body lang="en">
         <RouterOutlet />
