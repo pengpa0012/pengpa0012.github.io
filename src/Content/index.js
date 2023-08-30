@@ -31,16 +31,16 @@ export const projectsContent = [
     demo_link: "https://mern-social-app-client.vercel.app/",
     code_link: "https://github.com/pengpa0012/mern-social-app"
   },
+  // {
+  //   title: "PRODUCT MANAGEMENT",
+  //   image_url: "/images/product-management.png",
+  //   description: "A full-stack web application using MERN stack that enables users to add and remove and update products, it also has dashboard for monitoring overall item status.",
+  //   icons: [],
+  //   demo_link: "https://mern-product-management-client.vercel.app/",
+  //   code_link: "https://github.com/pengpa0012/mern-product-management"
+  // },
   {
-    title: "PRODUCT MANAGEMENT",
-    image_url: "/images/product-management.png",
-    description: "A full-stack web application using MERN stack that enables users to add and remove and update products, it also has dashboard for monitoring overall item status.",
-    icons: [],
-    demo_link: "https://mern-product-management-client.vercel.app/",
-    code_link: "https://github.com/pengpa0012/mern-product-management"
-  },
-  {
-    title: "3D World",
+    title: "3D Sphere",
     image_url: "/images/threejs.png",
     description: "I'm currently learning 3D website. For this project I used react-three-fiber for adding meshes and textures and react-three-cannon for collision of the meshes.",
     icons: [],
