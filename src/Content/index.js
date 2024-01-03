@@ -42,9 +42,17 @@ export const projectsContent = [
   {
     title: "3D Sphere",
     image_url: "/images/threejs.png",
-    description: "I'm currently learning 3D website. For this project I used react-three-fiber for adding meshes and textures and react-three-cannon for collision of the meshes.",
+    description: "For this project I used react-three-fiber for adding meshes and textures and react-three-cannon for collision of the meshes.",
     icons: [],
     demo_link: "https://landing-page-threejs-eight.vercel.app/",
     code_link: "https://github.com/pengpa0012/landing-page-threejs"
+  },
+  {
+    title: "Canvas Particdles",
+    image_url: "/images/particles.png",
+    description: "Particle simulator using JS Canvas, you can add particles with different parameters like size, color and speed and just drag it anywhere on the the canvas.",
+    icons: [],
+    demo_link: "https://pengpa0012.github.io/js-canvas-particles/",
+    code_link: "https://github.com/pengpa0012/js-canvas-particles"
   }
 ]
