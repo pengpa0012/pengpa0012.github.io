@@ -48,9 +48,9 @@ export const projectsContent = [
     code_link: "https://github.com/pengpa0012/landing-page-threejs"
   },
   {
-    title: "Canvas Particdles",
+    title: "Canvas Particles",
     image_url: "/images/particles.png",
-    description: "Particle simulator using JS Canvas, you can add particles with different parameters like size, color and speed and just drag it anywhere on the the canvas.",
+    description: "Particle simulator using JS Canvas, you can add particles with different parameters like size, color and speed and just drag it anywhere on the canvas.",
     icons: [],
     demo_link: "https://pengpa0012.github.io/js-canvas-particles/",
     code_link: "https://github.com/pengpa0012/js-canvas-particles"
