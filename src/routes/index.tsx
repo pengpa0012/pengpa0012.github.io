@@ -128,7 +128,7 @@ export default component$(() => {
             <div class="max-w-5xl mx-auto flex flex-wrap gap-4 sm:gap-12 justify-center">
               {
                 images.map((img, i) => (
-                  <img key={`img-${i}`} src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${img}/${img}-${img == "tailwindcss" ? "plain" : "original"}.svg`} class="w-12 sm:w-24" title={img} style={{filter: store.toggle && (img == "nextjs" || img == "express" || img == "github") ? "brightness(0) invert(1)" : ""}} data-aos="fade-up" data-aos-duration="2000"/> 
+                  <img key={`img-${i}`} src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${img}/${img}-original.svg`} class="w-12 sm:w-24" title={img} style={{filter: store.toggle && (img == "nextjs" || img == "express" || img == "github") ? "brightness(0) invert(1)" : ""}} data-aos="fade-up" data-aos-duration="2000"/> 
                 ))
               }
             
