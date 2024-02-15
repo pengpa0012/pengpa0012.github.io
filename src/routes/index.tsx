@@ -136,7 +136,7 @@ export default component$(() => {
           </div>
         </div>
         <div class="py-20 sm:py-36" id="projects">
-          <h2 class="text-2xl sm:text-3xl text-center mb-4 sm:mb-32" data-aos="fade-up">SOME OF MY WORKS</h2>
+          {/* <h2 class="text-2xl sm:text-3xl text-center mb-4 sm:mb-32" data-aos="fade-up">SOME OF MY WORKS</h2>
           {
             projectsContent.map((item, i) => (
               <div class="flex flex-col md:flex-row justify-center max-w-4xl mx-auto my-16 sm:my-32" key={`${item}-${i}`} data-aos="fade-up">
@@ -162,7 +162,7 @@ export default component$(() => {
                 </div>
               </div>
             ))
-          }
+          } */}
           <div class="text-center">
             <a href="https://github.com/pengpa0012" target="_blank">
               <button class="text-sm sm:text-lg btn-black border border-transparent hover:border-white" data-aos="fade-up">View my Github</button>
