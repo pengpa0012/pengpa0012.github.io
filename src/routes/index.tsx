@@ -1,6 +1,6 @@
 import { component$, useStore } from '@builder.io/qwik';
-import { DocumentHead, Link } from '@builder.io/qwik-city';
-import { images, projectsContent } from '~/Content';
+import { DocumentHead } from '@builder.io/qwik-city';
+import { images } from '~/Content';
 
 export default component$(() => {
   const projects = typeof document !== 'undefined' ? document.getElementById("projects") : undefined
