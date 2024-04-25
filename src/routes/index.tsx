@@ -1,6 +1,6 @@
 import { component$, useStore } from '@builder.io/qwik';
-import { DocumentHead } from '@builder.io/qwik-city';
-import { images } from '~/Content';
+import { DocumentHead, Link } from '@builder.io/qwik-city';
+import { images, projectsContent } from '~/Content';
 
 export default component$(() => {
   const projects = typeof document !== 'undefined' ? document.getElementById("projects") : undefined
@@ -136,12 +136,12 @@ export default component$(() => {
           </div>
         </div>
         <div class="py-20 sm:py-36" id="projects">
-          {/* <h2 class="text-2xl sm:text-3xl text-center mb-4 sm:mb-32" data-aos="fade-up">SOME OF MY WORKS</h2>
+          <h2 class="text-2xl sm:text-3xl text-center mb-4 sm:mb-32" data-aos="fade-up">SOME OF MY WORKS</h2>
           {
             projectsContent.map((item, i) => (
               <div class="flex flex-col md:flex-row justify-center max-w-4xl mx-auto my-16 sm:my-32" key={`${item}-${i}`} data-aos="fade-up">
-                <img src={item.image_url} class="mx-auto sm:mx-0 md:mr-12 mb-4 md:mb-0 w-full max-w-[300px] rounded-md !shadow-md"/>
-                <div class="text-center sm:text-left">
+                <img src={item.image_url} class="flex-1 max-w-[300px] md:mr-12 mx-auto sm:mx-0 mb-4 md:mb-0 w-full aspect-square object-contain rounded-md !shadow-md bg-white"/>
+                <div class="flex-1 text-center sm:text-left">
                   <h1 class="text-xl sm:text-2xl">{item.title}</h1>
                   <p class="my-4">{item.description}</p>
                   <ul class="flex gap-4">
@@ -162,7 +162,7 @@ export default component$(() => {
                 </div>
               </div>
             ))
-          } */}
+          }
           <div class="text-center">
             <a href="https://github.com/pengpa0012" target="_blank">
               <button class="text-sm sm:text-lg btn-black border border-transparent hover:border-white" data-aos="fade-up">View my Github</button>

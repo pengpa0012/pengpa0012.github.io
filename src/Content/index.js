@@ -39,14 +39,14 @@ export const projectsContent = [
   //   demo_link: "https://mern-product-management-client.vercel.app/",
   //   code_link: "https://github.com/pengpa0012/mern-product-management"
   // },
-  {
-    title: "3D Sphere",
-    image_url: "/images/threejs.png",
-    description: "For this project I used react-three-fiber for adding meshes and textures and react-three-cannon for collision of the meshes.",
-    icons: [],
-    demo_link: "https://landing-page-threejs-eight.vercel.app/",
-    code_link: "https://github.com/pengpa0012/landing-page-threejs"
-  },
+  // {
+  //   title: "3D Sphere",
+  //   image_url: "/images/threejs.png",
+  //   description: "For this project I used react-three-fiber for adding meshes and textures and react-three-cannon for collision of the meshes.",
+  //   icons: [],
+  //   demo_link: "https://landing-page-threejs-eight.vercel.app/",
+  //   code_link: "https://github.com/pengpa0012/landing-page-threejs"
+  // },
   {
     title: "Canvas Particles",
     image_url: "/images/particles.png",
@@ -54,5 +54,13 @@ export const projectsContent = [
     icons: [],
     demo_link: "https://pengpa0012.github.io/js-canvas-particles/",
     code_link: "https://github.com/pengpa0012/js-canvas-particles"
+  },
+  {
+    title: "Memory Game",
+    image_url: "/images/memory-game.png",
+    description: "Matching card game with three difficulty (Easy, Medium, Hard) using Vanilla Javascript.",
+    icons: [],
+    demo_link: "https://pengpa0012.github.io/js-memory-game/",
+    code_link: "https://github.com/pengpa0012/js-memory-game"
   }
 ]
