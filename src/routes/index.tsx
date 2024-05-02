@@ -140,7 +140,7 @@ export default component$(() => {
           {
             projectsContent.map((item, i) => (
               <div class="flex flex-col md:flex-row justify-center max-w-4xl mx-auto my-16 sm:my-32" key={`${item}-${i}`} data-aos="fade-up">
-                <img src={item.image_url} class="flex-1 max-w-[300px] md:mr-12 mx-auto sm:mx-0 mb-4 md:mb-0 w-full aspect-square object-contain rounded-md !shadow-md bg-white"/>
+                <img src={item.image_url} class="flex-1 max-w-[300px] md:mr-12 mx-auto sm:mx-0 mb-4 md:mb-0 w-full aspect-square object-cover rounded-md !shadow-md bg-white"/>
                 <div class="flex-1 text-center sm:text-left">
                   <h1 class="text-xl sm:text-2xl">{item.title}</h1>
                   <p class="my-4">{item.description}</p>
