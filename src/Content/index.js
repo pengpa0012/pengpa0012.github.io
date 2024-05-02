@@ -62,5 +62,13 @@ export const projectsContent = [
     icons: [],
     demo_link: "https://pengpa0012.github.io/js-memory-game/",
     code_link: "https://github.com/pengpa0012/js-memory-game"
+  },
+  {
+    title: "Fish Tank Simulator",
+    image_url: "/images/fish-tank-simulator.png",
+    description: "Watch the fish swim around the screen, you can feed them by clicking anywhere on screen or you can spawn new fish by opening the tab on top left side. Made using P5.js",
+    icons: [],
+    demo_link: "https://pengpa0012.github.io/fish-tank-simulator/",
+    code_link: "https://github.com/pengpa0012/fish-tank-simulator"
   }
 ]
