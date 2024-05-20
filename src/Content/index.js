@@ -48,6 +48,14 @@ export const projectsContent = [
   //   code_link: "https://github.com/pengpa0012/landing-page-threejs"
   // },
   {
+    title: "Pixel Path Finder",
+    image_url: "/images/pixel-path-finder.png",
+    description: "Pixel Path Finder is an interactive maze-solving application developed using p5.js. It features a grid where users can create walls to form a maze. The pixel then dynamically navigates through the maze, finding the optimal path to reach the end goal.",
+    icons: [],
+    demo_link: "https://pengpa0012.github.io/pixel-path-finder/",
+    code_link: "https://github.com/pengpa0012/pixel-path-finder"
+  },
+  {
     title: "Canvas Particles",
     image_url: "/images/particles.png",
     description: "Particle simulator using JS Canvas, you can add particles with different parameters like size, color and speed and just drag it anywhere on the canvas.",
