@@ -13,12 +13,11 @@ export default component$(() => {
    */
 
   const analyticsScript = `
-  window.dataLayer = window.dataLayer || [];
-  function gtag() { window.dataLayer.push(arguments); }
+ window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', '');
-  gtag('config', '');
+  gtag('config', 'G-59EYNYXNMS');
 `;
   return (
     <QwikCityProvider>
